@@ -72,19 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -109,6 +113,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -144,6 +149,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -154,20 +160,43 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CBLogger.h" />
+    <ClInclude Include="ChatCommandMessage.h" />
+    <ClInclude Include="ChatCommandResponseMessage.h" />
     <ClInclude Include="IMessage.h" />
+    <ClInclude Include="IMessageQueue.h" />
+    <ClInclude Include="ListUsersCommandMessage.h" />
+    <ClInclude Include="ListUsersCommandResponseMessage.h" />
+    <ClInclude Include="LoginCommandMessage.h" />
+    <ClInclude Include="LoginCommandResponseMessage.h" />
+    <ClInclude Include="LogoutCommandMessage.h" />
+    <ClInclude Include="LogoutCommandResponseMessage.h" />
+    <ClInclude Include="RegisterCommandMessage.h" />
+    <ClInclude Include="RegisterCommandResponseMessage.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TextChatterMessage.h" />
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CBLogger.cpp" />
-    <ClCompile Include="IMessage.cpp" />
+    <ClCompile Include="ChatCommandMessage.cpp" />
+    <ClCompile Include="ChatCommandResponseMessage.cpp" />
+    <ClCompile Include="IMessageQueue.cpp" />
+    <ClCompile Include="ListUsersCommandMessage.cpp" />
+    <ClCompile Include="ListUsersCommandResponseMessage.cpp" />
+    <ClCompile Include="LoginCommandMessage.cpp" />
+    <ClCompile Include="LoginCommandResponseMessage.cpp" />
+    <ClCompile Include="LogoutCommandMessage.cpp" />
+    <ClCompile Include="LogoutCommandResponseMessage.cpp" />
+    <ClCompile Include="RegisterCommandMessage.cpp" />
+    <ClCompile Include="RegisterCommandResponseMessage.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TextChatterMessage.cpp" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
