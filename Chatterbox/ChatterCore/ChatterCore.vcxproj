@@ -23,34 +23,34 @@
     <ProjectGuid>{DC61DBDD-F7A0-40D8-917E-A865B3A87B74}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ChatterCore</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -74,25 +74,29 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
@@ -107,7 +111,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
@@ -122,7 +126,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -141,7 +145,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -159,11 +163,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BackgroundWorker.h" />
     <ClInclude Include="CBLogger.h" />
     <ClInclude Include="ChatCommandMessage.h" />
     <ClInclude Include="ChatCommandResponseMessage.h" />
+    <ClInclude Include="ChatterBoxThread.h" />
     <ClInclude Include="IMessage.h" />
     <ClInclude Include="IMessageQueue.h" />
+    <ClInclude Include="IRunnable.h" />
     <ClInclude Include="ListUsersCommandMessage.h" />
     <ClInclude Include="ListUsersCommandResponseMessage.h" />
     <ClInclude Include="LoginCommandMessage.h" />
@@ -178,10 +185,13 @@
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BackgroundWorker.cpp" />
     <ClCompile Include="CBLogger.cpp" />
     <ClCompile Include="ChatCommandMessage.cpp" />
     <ClCompile Include="ChatCommandResponseMessage.cpp" />
+    <ClCompile Include="ChatterBoxThread.cpp" />
     <ClCompile Include="IMessageQueue.cpp" />
+    <ClCompile Include="IRunnable.cpp" />
     <ClCompile Include="ListUsersCommandMessage.cpp" />
     <ClCompile Include="ListUsersCommandResponseMessage.cpp" />
     <ClCompile Include="LoginCommandMessage.cpp" />

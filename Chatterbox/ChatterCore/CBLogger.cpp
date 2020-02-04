@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "CBLogger.h"
 using namespace ChatterBoxCore;
 
@@ -15,9 +16,9 @@ CBLogger::~CBLogger()
 
 std::shared_ptr<CBLogger> CBLogger::GetInstance()
 {
-	if (s_pInstance.get() == NULL)
+	if (!s_pInstance)
 	{
-		s_pInstance = std::make_shared<CBLogger>();
+		s_pInstance = std::shared_ptr<CBLogger>(new CBLogger());
 	}
 	return s_pInstance;
 }
@@ -69,6 +70,17 @@ void CBLogger::Trace(std::string message, std::string functionName, int lineNumb
 	Poco::Message logMessage;
 	logMessage.setPriority(Poco::Message::Priority::PRIO_TRACE);
 	logMessage.setText(message);
+	logMessage["function"] = functionName;
+	logMessage["line"] = Util::Int2String(lineNumber);
+	logMessage["thread"] = Util::ThreadId2String(std::this_thread::get_id());
+	logger.log(logMessage);
+}
+
+void CBLogger::TraceMethod(std::string functionName, int lineNumber)
+{
+	Logger& logger = Logger::get(m_loggerName);
+	Poco::Message logMessage;
+	logMessage.setPriority(Poco::Message::Priority::PRIO_TRACE);
 	logMessage["function"] = functionName;
 	logMessage["line"] = Util::Int2String(lineNumber);
 	logMessage["thread"] = Util::ThreadId2String(std::this_thread::get_id());

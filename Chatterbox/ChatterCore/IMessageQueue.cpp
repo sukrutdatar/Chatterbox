@@ -51,7 +51,7 @@ void IMessageQueue::Clear()
 
 bool IMessageQueue::HasNextMessage()
 {
-	return (m_messageQueue.size() > 0);
+	return !m_messageQueue.empty();
 }
 
 std::shared_ptr<IMessage> IMessageQueue::GetNextMessage()

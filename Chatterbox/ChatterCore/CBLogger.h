@@ -23,7 +23,7 @@ using Poco::PatternFormatter;
 using Poco::FormattingChannel;
 
 
-#define LOGGER ChatterBoxCore::GetInstance()
+#define LOGGER ChatterBoxCore::CBLogger::GetInstance()
 #define LOG_FATAL(LogMessage) LOGGER->Fatal(LogMessage, __FUNCTION__, __LINE__);
 #define LOG_CRITICAL(LogMessage) LOGGER->Critical(LogMessage, __FUNCTION__, __LINE__);
 #define LOG_ERROR(LogMessage) LOGGER->Error(LogMessage, __FUNCTION__, __LINE__);
@@ -31,6 +31,7 @@ using Poco::FormattingChannel;
 #define LOG_INFO(LogMessage) LOGGER->Info(LogMessage, __FUNCTION__, __LINE__);
 #define LOG_DEBUG(LogMessage) LOGGER->Debug(LogMessage, __FUNCTION__, __LINE__);
 #define LOG_TRACE(LogMessage) LOGGER->Trace(LogMessage, __FUNCTION__, __LINE__);
+#define LOG_TRACE_METHOD LOGGER->TraceMethod(__FUNCTION__, __LINE__);
 
 namespace ChatterBoxCore
 {
@@ -71,6 +72,7 @@ namespace ChatterBoxCore
 		void Info(std::string, std::string, int);
 		void Debug(std::string, std::string, int);
 		void Trace(std::string, std::string, int);
+		void TraceMethod(std::string, int);
 
 		~CBLogger();
 	};
