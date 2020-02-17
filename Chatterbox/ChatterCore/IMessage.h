@@ -52,6 +52,10 @@ namespace ChatterBoxCore
 
 		virtual std::string ToString() = 0;
 		virtual std::string ToJson() = 0;
+
+		static IMessage* Create(MessageType, CommandType);
+		static IMessage* Create(MessageType, ChatterType);
+		static IMessage* Create(MessageType, CommandResponseType);
 	};
 
 #pragma region Chatter Message

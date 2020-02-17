@@ -190,6 +190,7 @@
     <ClCompile Include="ChatCommandMessage.cpp" />
     <ClCompile Include="ChatCommandResponseMessage.cpp" />
     <ClCompile Include="ChatterBoxThread.cpp" />
+    <ClCompile Include="IMessage.cpp" />
     <ClCompile Include="IMessageQueue.cpp" />
     <ClCompile Include="IRunnable.cpp" />
     <ClCompile Include="ListUsersCommandMessage.cpp" />

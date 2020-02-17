@@ -9,6 +9,9 @@ namespace ChatterBoxCore
 	public:
 		ChatCommandResponseMessage();
 		virtual ~ChatCommandResponseMessage();
+
+		virtual std::string ToString();
+		virtual std::string ToJson();
 	};
 }
 
