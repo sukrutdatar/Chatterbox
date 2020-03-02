@@ -1,0 +1,24 @@
+syntax = "proto2";
+package Client;
+
+message Message {
+	enum MsgType
+	{
+		BeaconMsg = 0;
+		TestMsg = 1;
+	}
+
+	required int32 id = 1;
+	required string message = 2;
+	required MsgType type = 3;
+	optional BeaconMessage bmsg = 4;
+	optional TestMessage tmsg = 5;
+}
+
+message BeaconMessage {
+	required bool status = 1;
+}
+
+message TestMessage {
+	required int32 ttl = 1;
+}
