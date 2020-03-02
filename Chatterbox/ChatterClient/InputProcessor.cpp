@@ -71,39 +71,48 @@ void InputProcessor::Process(std::string input)
 {
 	std::string commandName = std::string();
 	std::getline(std::stringstream(input), commandName, ' ');
-	std::cout << std::endl << "Processing:" << input;
+	IMessage* message;
 
 	if (commandName.compare("//chat") == 0)
 	{
 		std::cout << std::endl << "chat command";
+		message = IMessage::Create(MessageType::CommandMessage, CommandType::ChatCommand);
 	}
 	else if (commandName.compare("/login") == 0)
 	{
 		std::cout << std::endl << "login command";
+		message = IMessage::Create(MessageType::CommandMessage, CommandType::LoginCommand);
 	}
 	else if (commandName.compare("/join") == 0)
 	{
 		std::cout << std::endl << "join command";
+		//message = IMessage::Create(MessageType::CommandMessage, CommandType::);
+
 	}
 	else if (commandName.compare("/create") == 0)
 	{
 		std::cout << std::endl << "create command";
+		//message = IMessage::Create(MessageType::CommandMessage, CommandType::);
 	}
 	else if (commandName.compare("/list") == 0)
 	{
 		std::cout << std::endl << "list command";
+		message = IMessage::Create(MessageType::CommandMessage, CommandType::ListUsersCommand);
 	}
 	else if (commandName.compare("/logout") == 0)
 	{
 		std::cout << std::endl << "logout command";
+		message = IMessage::Create(MessageType::CommandMessage, CommandType::LogoutCommand);
 	}
 	else if (commandName.compare("/register") == 0)
 	{
 		std::cout << std::endl << "register command";
+		message = IMessage::Create(MessageType::CommandMessage, CommandType::RegisterCommand);
 	}
 	else if (commandName.compare("/status") == 0)
 	{
 		std::cout << std::endl << "status command";
+		//message = IMessage::Create(MessageType::CommandMessage, CommandType::);
 	}
 }
 

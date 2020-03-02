@@ -56,6 +56,7 @@ namespace ChatterBoxCore
 		static IMessage* Create(MessageType, CommandType);
 		static IMessage* Create(MessageType, ChatterType);
 		static IMessage* Create(MessageType, CommandResponseType);
+		static IMessage* Create(std::string);
 	};
 
 #pragma region Chatter Message

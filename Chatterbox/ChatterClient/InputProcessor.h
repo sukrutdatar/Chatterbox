@@ -8,6 +8,7 @@
 #include "../ChatterCore/BackgroundWorker.h"
 #include "../ChatterCore//CBLogger.h"
 #include "../ChatterCore/IRunnable.h"
+#include "../ChatterCore/IMessage.h"
 using namespace ChatterBoxCore;
 
 namespace ChatterBoxClient
