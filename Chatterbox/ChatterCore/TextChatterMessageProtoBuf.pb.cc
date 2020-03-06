@@ -14,23 +14,23 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 class TextChatterMessageProtoBufDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TextChatterMessageProtoBuf> _instance;
 } _TextChatterMessageProtoBuf_default_instance_;
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 static void InitDefaultsscc_info_TextChatterMessageProtoBuf_TextChatterMessageProtoBuf_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ChatterCore::Protocols::_TextChatterMessageProtoBuf_default_instance_;
-    new (ptr) ::ChatterCore::Protocols::TextChatterMessageProtoBuf();
+    void* ptr = &::ChatterBoxCore::Protocols::_TextChatterMessageProtoBuf_default_instance_;
+    new (ptr) ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ChatterCore::Protocols::TextChatterMessageProtoBuf::InitAsDefaultInstance();
+  ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TextChatterMessageProtoBuf_TextChatterMessageProtoBuf_2eproto =
@@ -42,26 +42,26 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_TextChatterMessageProtoBuf_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ChatterCore::Protocols::TextChatterMessageProtoBuf, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ChatterCore::Protocols::TextChatterMessageProtoBuf, textmessage_),
-  PROTOBUF_FIELD_OFFSET(::ChatterCore::Protocols::TextChatterMessageProtoBuf, chatwithuser_),
+  PROTOBUF_FIELD_OFFSET(::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf, textmessage_),
+  PROTOBUF_FIELD_OFFSET(::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf, chatwithuser_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::ChatterCore::Protocols::TextChatterMessageProtoBuf)},
+  { 0, -1, sizeof(::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ChatterCore::Protocols::_TextChatterMessageProtoBuf_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ChatterBoxCore::Protocols::_TextChatterMessageProtoBuf_default_instance_),
 };
 
 const char descriptor_table_protodef_TextChatterMessageProtoBuf_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n TextChatterMessageProtoBuf.proto\022\025Chat"
-  "terCore.Protocols\"G\n\032TextChatterMessageP"
-  "rotoBuf\022\023\n\013textMessage\030\004 \001(\t\022\024\n\014chatWith"
-  "User\030\005 \001(\tb\006proto3"
+  "\n TextChatterMessageProtoBuf.proto\022\030Chat"
+  "terBoxCore.Protocols\"G\n\032TextChatterMessa"
+  "geProtoBuf\022\023\n\013textMessage\030\004 \001(\t\022\024\n\014chatW"
+  "ithUser\030\005 \001(\tb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_TextChatterMessageProtoBuf_2eproto_deps[1] = {
 };
@@ -71,7 +71,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Tex
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_TextChatterMessageProtoBuf_2eproto_once;
 static bool descriptor_table_TextChatterMessageProtoBuf_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_TextChatterMessageProtoBuf_2eproto = {
-  &descriptor_table_TextChatterMessageProtoBuf_2eproto_initialized, descriptor_table_protodef_TextChatterMessageProtoBuf_2eproto, "TextChatterMessageProtoBuf.proto", 138,
+  &descriptor_table_TextChatterMessageProtoBuf_2eproto_initialized, descriptor_table_protodef_TextChatterMessageProtoBuf_2eproto, "TextChatterMessageProtoBuf.proto", 141,
   &descriptor_table_TextChatterMessageProtoBuf_2eproto_once, descriptor_table_TextChatterMessageProtoBuf_2eproto_sccs, descriptor_table_TextChatterMessageProtoBuf_2eproto_deps, 1, 0,
   schemas, file_default_instances, TableStruct_TextChatterMessageProtoBuf_2eproto::offsets,
   file_level_metadata_TextChatterMessageProtoBuf_2eproto, 1, file_level_enum_descriptors_TextChatterMessageProtoBuf_2eproto, file_level_service_descriptors_TextChatterMessageProtoBuf_2eproto,
@@ -79,7 +79,7 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_TextCh
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_TextChatterMessageProtoBuf_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_TextChatterMessageProtoBuf_2eproto), true);
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 
 // ===================================================================
@@ -93,7 +93,7 @@ class TextChatterMessageProtoBuf::_Internal {
 TextChatterMessageProtoBuf::TextChatterMessageProtoBuf()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:ChatterCore.Protocols.TextChatterMessageProtoBuf)
+  // @@protoc_insertion_point(constructor:ChatterBoxCore.Protocols.TextChatterMessageProtoBuf)
 }
 TextChatterMessageProtoBuf::TextChatterMessageProtoBuf(const TextChatterMessageProtoBuf& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -107,7 +107,7 @@ TextChatterMessageProtoBuf::TextChatterMessageProtoBuf(const TextChatterMessageP
   if (!from._internal_chatwithuser().empty()) {
     chatwithuser_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.chatwithuser_);
   }
-  // @@protoc_insertion_point(copy_constructor:ChatterCore.Protocols.TextChatterMessageProtoBuf)
+  // @@protoc_insertion_point(copy_constructor:ChatterBoxCore.Protocols.TextChatterMessageProtoBuf)
 }
 
 void TextChatterMessageProtoBuf::SharedCtor() {
@@ -117,7 +117,7 @@ void TextChatterMessageProtoBuf::SharedCtor() {
 }
 
 TextChatterMessageProtoBuf::~TextChatterMessageProtoBuf() {
-  // @@protoc_insertion_point(destructor:ChatterCore.Protocols.TextChatterMessageProtoBuf)
+  // @@protoc_insertion_point(destructor:ChatterBoxCore.Protocols.TextChatterMessageProtoBuf)
   SharedDtor();
 }
 
@@ -136,7 +136,7 @@ const TextChatterMessageProtoBuf& TextChatterMessageProtoBuf::default_instance()
 
 
 void TextChatterMessageProtoBuf::Clear() {
-// @@protoc_insertion_point(message_clear_start:ChatterCore.Protocols.TextChatterMessageProtoBuf)
+// @@protoc_insertion_point(message_clear_start:ChatterBoxCore.Protocols.TextChatterMessageProtoBuf)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -158,7 +158,7 @@ const char* TextChatterMessageProtoBuf::_InternalParse(const char* ptr, ::PROTOB
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_textmessage();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ChatterCore.Protocols.TextChatterMessageProtoBuf.textMessage"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ChatterBoxCore.Protocols.TextChatterMessageProtoBuf.textMessage"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -167,7 +167,7 @@ const char* TextChatterMessageProtoBuf::_InternalParse(const char* ptr, ::PROTOB
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           auto str = _internal_mutable_chatwithuser();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ChatterCore.Protocols.TextChatterMessageProtoBuf.chatWithUser"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ChatterBoxCore.Protocols.TextChatterMessageProtoBuf.chatWithUser"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -193,7 +193,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* TextChatterMessageProtoBuf::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ChatterCore.Protocols.TextChatterMessageProtoBuf)
+  // @@protoc_insertion_point(serialize_to_array_start:ChatterBoxCore.Protocols.TextChatterMessageProtoBuf)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -202,7 +202,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_textmessage().data(), static_cast<int>(this->_internal_textmessage().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ChatterCore.Protocols.TextChatterMessageProtoBuf.textMessage");
+      "ChatterBoxCore.Protocols.TextChatterMessageProtoBuf.textMessage");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_textmessage(), target);
   }
@@ -212,7 +212,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_chatwithuser().data(), static_cast<int>(this->_internal_chatwithuser().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ChatterCore.Protocols.TextChatterMessageProtoBuf.chatWithUser");
+      "ChatterBoxCore.Protocols.TextChatterMessageProtoBuf.chatWithUser");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_chatwithuser(), target);
   }
@@ -221,12 +221,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ChatterCore.Protocols.TextChatterMessageProtoBuf)
+  // @@protoc_insertion_point(serialize_to_array_end:ChatterBoxCore.Protocols.TextChatterMessageProtoBuf)
   return target;
 }
 
 size_t TextChatterMessageProtoBuf::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ChatterCore.Protocols.TextChatterMessageProtoBuf)
+// @@protoc_insertion_point(message_byte_size_start:ChatterBoxCore.Protocols.TextChatterMessageProtoBuf)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -257,22 +257,22 @@ size_t TextChatterMessageProtoBuf::ByteSizeLong() const {
 }
 
 void TextChatterMessageProtoBuf::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ChatterCore.Protocols.TextChatterMessageProtoBuf)
+// @@protoc_insertion_point(generalized_merge_from_start:ChatterBoxCore.Protocols.TextChatterMessageProtoBuf)
   GOOGLE_DCHECK_NE(&from, this);
   const TextChatterMessageProtoBuf* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<TextChatterMessageProtoBuf>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ChatterCore.Protocols.TextChatterMessageProtoBuf)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ChatterBoxCore.Protocols.TextChatterMessageProtoBuf)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ChatterCore.Protocols.TextChatterMessageProtoBuf)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:ChatterBoxCore.Protocols.TextChatterMessageProtoBuf)
     MergeFrom(*source);
   }
 }
 
 void TextChatterMessageProtoBuf::MergeFrom(const TextChatterMessageProtoBuf& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ChatterCore.Protocols.TextChatterMessageProtoBuf)
+// @@protoc_insertion_point(class_specific_merge_from_start:ChatterBoxCore.Protocols.TextChatterMessageProtoBuf)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -289,14 +289,14 @@ void TextChatterMessageProtoBuf::MergeFrom(const TextChatterMessageProtoBuf& fro
 }
 
 void TextChatterMessageProtoBuf::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ChatterCore.Protocols.TextChatterMessageProtoBuf)
+// @@protoc_insertion_point(generalized_copy_from_start:ChatterBoxCore.Protocols.TextChatterMessageProtoBuf)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void TextChatterMessageProtoBuf::CopyFrom(const TextChatterMessageProtoBuf& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ChatterCore.Protocols.TextChatterMessageProtoBuf)
+// @@protoc_insertion_point(class_specific_copy_from_start:ChatterBoxCore.Protocols.TextChatterMessageProtoBuf)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -322,10 +322,10 @@ void TextChatterMessageProtoBuf::InternalSwap(TextChatterMessageProtoBuf* other)
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::ChatterCore::Protocols::TextChatterMessageProtoBuf* Arena::CreateMaybeMessage< ::ChatterCore::Protocols::TextChatterMessageProtoBuf >(Arena* arena) {
-  return Arena::CreateInternal< ::ChatterCore::Protocols::TextChatterMessageProtoBuf >(arena);
+template<> PROTOBUF_NOINLINE ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf* Arena::CreateMaybeMessage< ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf >(Arena* arena) {
+  return Arena::CreateInternal< ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

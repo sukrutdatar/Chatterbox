@@ -4,41 +4,17 @@ using namespace ChatterBoxCore;
 
 
 LogoutCommandResponseMessage::LogoutCommandResponseMessage() :
-	ICommandResponseMessage(LogoutCommandResponse),
-	m_status(false),
-	m_responseMessage("")
+	ICommandResponseMessage(LogoutCommandResponse)
 {
 }
 
-LogoutCommandResponseMessage::LogoutCommandResponseMessage(std::string sessionKey, bool status, std::string responseMessage = "") :
-	ICommandResponseMessage(LogoutCommandResponse, sessionKey),
-	m_status(status),
-	m_responseMessage(responseMessage)
+LogoutCommandResponseMessage::LogoutCommandResponseMessage(std::string sessionKey, bool status, std::string responseMessage) :
+	ICommandResponseMessage(LogoutCommandResponse, status, responseMessage, sessionKey)
 {
 }
 
 LogoutCommandResponseMessage::~LogoutCommandResponseMessage()
 {
-}
-
-void LogoutCommandResponseMessage::SetStatus(bool status)
-{
-	m_status = status;
-}
-
-bool LogoutCommandResponseMessage::GetStatus()
-{
-	return m_status;
-}
-
-void LogoutCommandResponseMessage::SetResponseMessage(std::string responseMessage)
-{
-	m_responseMessage = responseMessage;
-}
-
-std::string LogoutCommandResponseMessage::GetResponseMessage()
-{
-	return m_responseMessage;
 }
 
 std::string LogoutCommandResponseMessage::ToString()

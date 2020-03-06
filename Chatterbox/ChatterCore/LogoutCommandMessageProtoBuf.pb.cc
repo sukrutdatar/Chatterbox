@@ -14,23 +14,23 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 class LogoutCommandMessageProtoBufDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LogoutCommandMessageProtoBuf> _instance;
 } _LogoutCommandMessageProtoBuf_default_instance_;
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 static void InitDefaultsscc_info_LogoutCommandMessageProtoBuf_LogoutCommandMessageProtoBuf_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ChatterCore::Protocols::_LogoutCommandMessageProtoBuf_default_instance_;
-    new (ptr) ::ChatterCore::Protocols::LogoutCommandMessageProtoBuf();
+    void* ptr = &::ChatterBoxCore::Protocols::_LogoutCommandMessageProtoBuf_default_instance_;
+    new (ptr) ::ChatterBoxCore::Protocols::LogoutCommandMessageProtoBuf();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ChatterCore::Protocols::LogoutCommandMessageProtoBuf::InitAsDefaultInstance();
+  ::ChatterBoxCore::Protocols::LogoutCommandMessageProtoBuf::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LogoutCommandMessageProtoBuf_LogoutCommandMessageProtoBuf_2eproto =
@@ -42,23 +42,23 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_LogoutCommandMessageProtoBuf_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ChatterCore::Protocols::LogoutCommandMessageProtoBuf, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ChatterBoxCore::Protocols::LogoutCommandMessageProtoBuf, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::ChatterCore::Protocols::LogoutCommandMessageProtoBuf)},
+  { 0, -1, sizeof(::ChatterBoxCore::Protocols::LogoutCommandMessageProtoBuf)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ChatterCore::Protocols::_LogoutCommandMessageProtoBuf_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ChatterBoxCore::Protocols::_LogoutCommandMessageProtoBuf_default_instance_),
 };
 
 const char descriptor_table_protodef_LogoutCommandMessageProtoBuf_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\"LogoutCommandMessageProtoBuf.proto\022\025Ch"
-  "atterCore.Protocols\"\036\n\034LogoutCommandMess"
-  "ageProtoBufb\006proto3"
+  "\n\"LogoutCommandMessageProtoBuf.proto\022\030Ch"
+  "atterBoxCore.Protocols\"\036\n\034LogoutCommandM"
+  "essageProtoBufb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_LogoutCommandMessageProtoBuf_2eproto_deps[1] = {
 };
@@ -68,7 +68,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Log
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_LogoutCommandMessageProtoBuf_2eproto_once;
 static bool descriptor_table_LogoutCommandMessageProtoBuf_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_LogoutCommandMessageProtoBuf_2eproto = {
-  &descriptor_table_LogoutCommandMessageProtoBuf_2eproto_initialized, descriptor_table_protodef_LogoutCommandMessageProtoBuf_2eproto, "LogoutCommandMessageProtoBuf.proto", 99,
+  &descriptor_table_LogoutCommandMessageProtoBuf_2eproto_initialized, descriptor_table_protodef_LogoutCommandMessageProtoBuf_2eproto, "LogoutCommandMessageProtoBuf.proto", 102,
   &descriptor_table_LogoutCommandMessageProtoBuf_2eproto_once, descriptor_table_LogoutCommandMessageProtoBuf_2eproto_sccs, descriptor_table_LogoutCommandMessageProtoBuf_2eproto_deps, 1, 0,
   schemas, file_default_instances, TableStruct_LogoutCommandMessageProtoBuf_2eproto::offsets,
   file_level_metadata_LogoutCommandMessageProtoBuf_2eproto, 1, file_level_enum_descriptors_LogoutCommandMessageProtoBuf_2eproto, file_level_service_descriptors_LogoutCommandMessageProtoBuf_2eproto,
@@ -76,7 +76,7 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Logout
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_LogoutCommandMessageProtoBuf_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_LogoutCommandMessageProtoBuf_2eproto), true);
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 
 // ===================================================================
@@ -90,20 +90,20 @@ class LogoutCommandMessageProtoBuf::_Internal {
 LogoutCommandMessageProtoBuf::LogoutCommandMessageProtoBuf()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:ChatterCore.Protocols.LogoutCommandMessageProtoBuf)
+  // @@protoc_insertion_point(constructor:ChatterBoxCore.Protocols.LogoutCommandMessageProtoBuf)
 }
 LogoutCommandMessageProtoBuf::LogoutCommandMessageProtoBuf(const LogoutCommandMessageProtoBuf& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:ChatterCore.Protocols.LogoutCommandMessageProtoBuf)
+  // @@protoc_insertion_point(copy_constructor:ChatterBoxCore.Protocols.LogoutCommandMessageProtoBuf)
 }
 
 void LogoutCommandMessageProtoBuf::SharedCtor() {
 }
 
 LogoutCommandMessageProtoBuf::~LogoutCommandMessageProtoBuf() {
-  // @@protoc_insertion_point(destructor:ChatterCore.Protocols.LogoutCommandMessageProtoBuf)
+  // @@protoc_insertion_point(destructor:ChatterBoxCore.Protocols.LogoutCommandMessageProtoBuf)
   SharedDtor();
 }
 
@@ -120,7 +120,7 @@ const LogoutCommandMessageProtoBuf& LogoutCommandMessageProtoBuf::default_instan
 
 
 void LogoutCommandMessageProtoBuf::Clear() {
-// @@protoc_insertion_point(message_clear_start:ChatterCore.Protocols.LogoutCommandMessageProtoBuf)
+// @@protoc_insertion_point(message_clear_start:ChatterBoxCore.Protocols.LogoutCommandMessageProtoBuf)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -152,7 +152,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* LogoutCommandMessageProtoBuf::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ChatterCore.Protocols.LogoutCommandMessageProtoBuf)
+  // @@protoc_insertion_point(serialize_to_array_start:ChatterBoxCore.Protocols.LogoutCommandMessageProtoBuf)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -160,12 +160,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ChatterCore.Protocols.LogoutCommandMessageProtoBuf)
+  // @@protoc_insertion_point(serialize_to_array_end:ChatterBoxCore.Protocols.LogoutCommandMessageProtoBuf)
   return target;
 }
 
 size_t LogoutCommandMessageProtoBuf::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ChatterCore.Protocols.LogoutCommandMessageProtoBuf)
+// @@protoc_insertion_point(message_byte_size_start:ChatterBoxCore.Protocols.LogoutCommandMessageProtoBuf)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -182,22 +182,22 @@ size_t LogoutCommandMessageProtoBuf::ByteSizeLong() const {
 }
 
 void LogoutCommandMessageProtoBuf::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ChatterCore.Protocols.LogoutCommandMessageProtoBuf)
+// @@protoc_insertion_point(generalized_merge_from_start:ChatterBoxCore.Protocols.LogoutCommandMessageProtoBuf)
   GOOGLE_DCHECK_NE(&from, this);
   const LogoutCommandMessageProtoBuf* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LogoutCommandMessageProtoBuf>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ChatterCore.Protocols.LogoutCommandMessageProtoBuf)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ChatterBoxCore.Protocols.LogoutCommandMessageProtoBuf)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ChatterCore.Protocols.LogoutCommandMessageProtoBuf)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:ChatterBoxCore.Protocols.LogoutCommandMessageProtoBuf)
     MergeFrom(*source);
   }
 }
 
 void LogoutCommandMessageProtoBuf::MergeFrom(const LogoutCommandMessageProtoBuf& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ChatterCore.Protocols.LogoutCommandMessageProtoBuf)
+// @@protoc_insertion_point(class_specific_merge_from_start:ChatterBoxCore.Protocols.LogoutCommandMessageProtoBuf)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -206,14 +206,14 @@ void LogoutCommandMessageProtoBuf::MergeFrom(const LogoutCommandMessageProtoBuf&
 }
 
 void LogoutCommandMessageProtoBuf::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ChatterCore.Protocols.LogoutCommandMessageProtoBuf)
+// @@protoc_insertion_point(generalized_copy_from_start:ChatterBoxCore.Protocols.LogoutCommandMessageProtoBuf)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void LogoutCommandMessageProtoBuf::CopyFrom(const LogoutCommandMessageProtoBuf& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ChatterCore.Protocols.LogoutCommandMessageProtoBuf)
+// @@protoc_insertion_point(class_specific_copy_from_start:ChatterBoxCore.Protocols.LogoutCommandMessageProtoBuf)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -235,10 +235,10 @@ void LogoutCommandMessageProtoBuf::InternalSwap(LogoutCommandMessageProtoBuf* ot
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::ChatterCore::Protocols::LogoutCommandMessageProtoBuf* Arena::CreateMaybeMessage< ::ChatterCore::Protocols::LogoutCommandMessageProtoBuf >(Arena* arena) {
-  return Arena::CreateInternal< ::ChatterCore::Protocols::LogoutCommandMessageProtoBuf >(arena);
+template<> PROTOBUF_NOINLINE ::ChatterBoxCore::Protocols::LogoutCommandMessageProtoBuf* Arena::CreateMaybeMessage< ::ChatterBoxCore::Protocols::LogoutCommandMessageProtoBuf >(Arena* arena) {
+  return Arena::CreateInternal< ::ChatterBoxCore::Protocols::LogoutCommandMessageProtoBuf >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

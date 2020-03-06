@@ -14,23 +14,23 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 class ListUsersCommandMessageProtoBufDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ListUsersCommandMessageProtoBuf> _instance;
 } _ListUsersCommandMessageProtoBuf_default_instance_;
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 static void InitDefaultsscc_info_ListUsersCommandMessageProtoBuf_ListUsersCommandMessageProtoBuf_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ChatterCore::Protocols::_ListUsersCommandMessageProtoBuf_default_instance_;
-    new (ptr) ::ChatterCore::Protocols::ListUsersCommandMessageProtoBuf();
+    void* ptr = &::ChatterBoxCore::Protocols::_ListUsersCommandMessageProtoBuf_default_instance_;
+    new (ptr) ::ChatterBoxCore::Protocols::ListUsersCommandMessageProtoBuf();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ChatterCore::Protocols::ListUsersCommandMessageProtoBuf::InitAsDefaultInstance();
+  ::ChatterBoxCore::Protocols::ListUsersCommandMessageProtoBuf::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ListUsersCommandMessageProtoBuf_ListUsersCommandMessageProtoBuf_2eproto =
@@ -42,23 +42,23 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_ListUsersCommandMessageProtoBuf_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ChatterCore::Protocols::ListUsersCommandMessageProtoBuf, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ChatterBoxCore::Protocols::ListUsersCommandMessageProtoBuf, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::ChatterCore::Protocols::ListUsersCommandMessageProtoBuf)},
+  { 0, -1, sizeof(::ChatterBoxCore::Protocols::ListUsersCommandMessageProtoBuf)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ChatterCore::Protocols::_ListUsersCommandMessageProtoBuf_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ChatterBoxCore::Protocols::_ListUsersCommandMessageProtoBuf_default_instance_),
 };
 
 const char descriptor_table_protodef_ListUsersCommandMessageProtoBuf_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n%ListUsersCommandMessageProtoBuf.proto\022"
-  "\025ChatterCore.Protocols\"!\n\037ListUsersComma"
-  "ndMessageProtoBufb\006proto3"
+  "\030ChatterBoxCore.Protocols\"!\n\037ListUsersCo"
+  "mmandMessageProtoBufb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ListUsersCommandMessageProtoBuf_2eproto_deps[1] = {
 };
@@ -68,7 +68,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Lis
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ListUsersCommandMessageProtoBuf_2eproto_once;
 static bool descriptor_table_ListUsersCommandMessageProtoBuf_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ListUsersCommandMessageProtoBuf_2eproto = {
-  &descriptor_table_ListUsersCommandMessageProtoBuf_2eproto_initialized, descriptor_table_protodef_ListUsersCommandMessageProtoBuf_2eproto, "ListUsersCommandMessageProtoBuf.proto", 105,
+  &descriptor_table_ListUsersCommandMessageProtoBuf_2eproto_initialized, descriptor_table_protodef_ListUsersCommandMessageProtoBuf_2eproto, "ListUsersCommandMessageProtoBuf.proto", 108,
   &descriptor_table_ListUsersCommandMessageProtoBuf_2eproto_once, descriptor_table_ListUsersCommandMessageProtoBuf_2eproto_sccs, descriptor_table_ListUsersCommandMessageProtoBuf_2eproto_deps, 1, 0,
   schemas, file_default_instances, TableStruct_ListUsersCommandMessageProtoBuf_2eproto::offsets,
   file_level_metadata_ListUsersCommandMessageProtoBuf_2eproto, 1, file_level_enum_descriptors_ListUsersCommandMessageProtoBuf_2eproto, file_level_service_descriptors_ListUsersCommandMessageProtoBuf_2eproto,
@@ -76,7 +76,7 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ListUs
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_ListUsersCommandMessageProtoBuf_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_ListUsersCommandMessageProtoBuf_2eproto), true);
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 
 // ===================================================================
@@ -90,20 +90,20 @@ class ListUsersCommandMessageProtoBuf::_Internal {
 ListUsersCommandMessageProtoBuf::ListUsersCommandMessageProtoBuf()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf)
+  // @@protoc_insertion_point(constructor:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf)
 }
 ListUsersCommandMessageProtoBuf::ListUsersCommandMessageProtoBuf(const ListUsersCommandMessageProtoBuf& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf)
+  // @@protoc_insertion_point(copy_constructor:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf)
 }
 
 void ListUsersCommandMessageProtoBuf::SharedCtor() {
 }
 
 ListUsersCommandMessageProtoBuf::~ListUsersCommandMessageProtoBuf() {
-  // @@protoc_insertion_point(destructor:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf)
+  // @@protoc_insertion_point(destructor:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf)
   SharedDtor();
 }
 
@@ -120,7 +120,7 @@ const ListUsersCommandMessageProtoBuf& ListUsersCommandMessageProtoBuf::default_
 
 
 void ListUsersCommandMessageProtoBuf::Clear() {
-// @@protoc_insertion_point(message_clear_start:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf)
+// @@protoc_insertion_point(message_clear_start:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -152,7 +152,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* ListUsersCommandMessageProtoBuf::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf)
+  // @@protoc_insertion_point(serialize_to_array_start:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -160,12 +160,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf)
+  // @@protoc_insertion_point(serialize_to_array_end:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf)
   return target;
 }
 
 size_t ListUsersCommandMessageProtoBuf::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf)
+// @@protoc_insertion_point(message_byte_size_start:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -182,22 +182,22 @@ size_t ListUsersCommandMessageProtoBuf::ByteSizeLong() const {
 }
 
 void ListUsersCommandMessageProtoBuf::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf)
+// @@protoc_insertion_point(generalized_merge_from_start:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf)
   GOOGLE_DCHECK_NE(&from, this);
   const ListUsersCommandMessageProtoBuf* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ListUsersCommandMessageProtoBuf>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf)
     MergeFrom(*source);
   }
 }
 
 void ListUsersCommandMessageProtoBuf::MergeFrom(const ListUsersCommandMessageProtoBuf& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf)
+// @@protoc_insertion_point(class_specific_merge_from_start:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -206,14 +206,14 @@ void ListUsersCommandMessageProtoBuf::MergeFrom(const ListUsersCommandMessagePro
 }
 
 void ListUsersCommandMessageProtoBuf::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf)
+// @@protoc_insertion_point(generalized_copy_from_start:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void ListUsersCommandMessageProtoBuf::CopyFrom(const ListUsersCommandMessageProtoBuf& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf)
+// @@protoc_insertion_point(class_specific_copy_from_start:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -235,10 +235,10 @@ void ListUsersCommandMessageProtoBuf::InternalSwap(ListUsersCommandMessageProtoB
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::ChatterCore::Protocols::ListUsersCommandMessageProtoBuf* Arena::CreateMaybeMessage< ::ChatterCore::Protocols::ListUsersCommandMessageProtoBuf >(Arena* arena) {
-  return Arena::CreateInternal< ::ChatterCore::Protocols::ListUsersCommandMessageProtoBuf >(arena);
+template<> PROTOBUF_NOINLINE ::ChatterBoxCore::Protocols::ListUsersCommandMessageProtoBuf* Arena::CreateMaybeMessage< ::ChatterBoxCore::Protocols::ListUsersCommandMessageProtoBuf >(Arena* arena) {
+  return Arena::CreateInternal< ::ChatterBoxCore::Protocols::ListUsersCommandMessageProtoBuf >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

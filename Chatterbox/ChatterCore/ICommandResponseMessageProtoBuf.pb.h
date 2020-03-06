@@ -33,6 +33,11 @@
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
+#include "LoginCommandResponseMessageProtoBuf.pb.h"
+#include "RegisterCommandResponseMessageProtoBuf.pb.h"
+#include "ChatCommandResponseMessageProtoBuf.pb.h"
+#include "LogoutCommandResponseMessageProtoBuf.pb.h"
+#include "ListUsersCommandResponseMessageProtoBuf.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_ICommandResponseMessageProtoBuf_2eproto
@@ -55,17 +60,17 @@ struct TableStruct_ICommandResponseMessageProtoBuf_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ICommandResponseMessageProtoBuf_2eproto;
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 class ICommandResponseMessageProtoBuf;
 class ICommandResponseMessageProtoBufDefaultTypeInternal;
 extern ICommandResponseMessageProtoBufDefaultTypeInternal _ICommandResponseMessageProtoBuf_default_instance_;
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 PROTOBUF_NAMESPACE_OPEN
-template<> ::ChatterCore::Protocols::ICommandResponseMessageProtoBuf* Arena::CreateMaybeMessage<::ChatterCore::Protocols::ICommandResponseMessageProtoBuf>(Arena*);
+template<> ::ChatterBoxCore::Protocols::ICommandResponseMessageProtoBuf* Arena::CreateMaybeMessage<::ChatterBoxCore::Protocols::ICommandResponseMessageProtoBuf>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 
 enum ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf : int {
@@ -99,7 +104,7 @@ inline bool ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf_Parse(
 // ===================================================================
 
 class ICommandResponseMessageProtoBuf :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ChatterCore.Protocols.ICommandResponseMessageProtoBuf) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf) */ {
  public:
   ICommandResponseMessageProtoBuf();
   virtual ~ICommandResponseMessageProtoBuf();
@@ -133,6 +138,15 @@ class ICommandResponseMessageProtoBuf :
     return GetMetadataStatic().reflection;
   }
   static const ICommandResponseMessageProtoBuf& default_instance();
+
+  enum ResponseDataCase {
+    kLoginCommandResponseMessagePB = 9,
+    kRegisterCommandResponseMessagePB = 10,
+    kChatCommandResponseMessagePB = 11,
+    kLogoutCommandResponseMessagePB = 12,
+    kListUsersCommandResponseMessagePB = 13,
+    RESPONSEDATA_NOT_SET = 0,
+  };
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
   static inline const ICommandResponseMessageProtoBuf* internal_default_instance() {
@@ -179,7 +193,7 @@ class ICommandResponseMessageProtoBuf :
   void InternalSwap(ICommandResponseMessageProtoBuf* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ChatterCore.Protocols.ICommandResponseMessageProtoBuf";
+    return "ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -240,24 +254,153 @@ class ICommandResponseMessageProtoBuf :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kCommandResponseTypeFieldNumber = 3,
+    kResponseMessageFieldNumber = 4,
+    kStatusFieldNumber = 3,
+    kCommandResponseTypeFieldNumber = 5,
+    kLoginCommandResponseMessagePBFieldNumber = 9,
+    kRegisterCommandResponseMessagePBFieldNumber = 10,
+    kChatCommandResponseMessagePBFieldNumber = 11,
+    kLogoutCommandResponseMessagePBFieldNumber = 12,
+    kListUsersCommandResponseMessagePBFieldNumber = 13,
   };
-  // .ChatterCore.Protocols.ICommandResponseMessageProtoBuf.CommandResponseTypeProtoBuf commandResponseType = 3;
-  void clear_commandresponsetype();
-  ::ChatterCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf commandresponsetype() const;
-  void set_commandresponsetype(::ChatterCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf value);
+  // string responseMessage = 4;
+  void clear_responsemessage();
+  const std::string& responsemessage() const;
+  void set_responsemessage(const std::string& value);
+  void set_responsemessage(std::string&& value);
+  void set_responsemessage(const char* value);
+  void set_responsemessage(const char* value, size_t size);
+  std::string* mutable_responsemessage();
+  std::string* release_responsemessage();
+  void set_allocated_responsemessage(std::string* responsemessage);
   private:
-  ::ChatterCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf _internal_commandresponsetype() const;
-  void _internal_set_commandresponsetype(::ChatterCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf value);
+  const std::string& _internal_responsemessage() const;
+  void _internal_set_responsemessage(const std::string& value);
+  std::string* _internal_mutable_responsemessage();
   public:
 
-  // @@protoc_insertion_point(class_scope:ChatterCore.Protocols.ICommandResponseMessageProtoBuf)
+  // bool status = 3;
+  void clear_status();
+  bool status() const;
+  void set_status(bool value);
+  private:
+  bool _internal_status() const;
+  void _internal_set_status(bool value);
+  public:
+
+  // .ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.CommandResponseTypeProtoBuf commandResponseType = 5;
+  void clear_commandresponsetype();
+  ::ChatterBoxCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf commandresponsetype() const;
+  void set_commandresponsetype(::ChatterBoxCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf value);
+  private:
+  ::ChatterBoxCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf _internal_commandresponsetype() const;
+  void _internal_set_commandresponsetype(::ChatterBoxCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf value);
+  public:
+
+  // .ChatterBoxCore.Protocols.LoginCommandResponseMessageProtoBuf LoginCommandResponseMessagePB = 9;
+  bool has_logincommandresponsemessagepb() const;
+  private:
+  bool _internal_has_logincommandresponsemessagepb() const;
+  public:
+  void clear_logincommandresponsemessagepb();
+  const ::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf& logincommandresponsemessagepb() const;
+  ::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf* release_logincommandresponsemessagepb();
+  ::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf* mutable_logincommandresponsemessagepb();
+  void set_allocated_logincommandresponsemessagepb(::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf* logincommandresponsemessagepb);
+  private:
+  const ::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf& _internal_logincommandresponsemessagepb() const;
+  ::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf* _internal_mutable_logincommandresponsemessagepb();
+  public:
+
+  // .ChatterBoxCore.Protocols.RegisterCommandResponseMessageProtoBuf RegisterCommandResponseMessagePB = 10;
+  bool has_registercommandresponsemessagepb() const;
+  private:
+  bool _internal_has_registercommandresponsemessagepb() const;
+  public:
+  void clear_registercommandresponsemessagepb();
+  const ::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf& registercommandresponsemessagepb() const;
+  ::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf* release_registercommandresponsemessagepb();
+  ::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf* mutable_registercommandresponsemessagepb();
+  void set_allocated_registercommandresponsemessagepb(::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf* registercommandresponsemessagepb);
+  private:
+  const ::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf& _internal_registercommandresponsemessagepb() const;
+  ::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf* _internal_mutable_registercommandresponsemessagepb();
+  public:
+
+  // .ChatterBoxCore.Protocols.ChatCommandResponseMessageProtoBuf ChatCommandResponseMessagePB = 11;
+  bool has_chatcommandresponsemessagepb() const;
+  private:
+  bool _internal_has_chatcommandresponsemessagepb() const;
+  public:
+  void clear_chatcommandresponsemessagepb();
+  const ::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf& chatcommandresponsemessagepb() const;
+  ::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf* release_chatcommandresponsemessagepb();
+  ::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf* mutable_chatcommandresponsemessagepb();
+  void set_allocated_chatcommandresponsemessagepb(::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf* chatcommandresponsemessagepb);
+  private:
+  const ::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf& _internal_chatcommandresponsemessagepb() const;
+  ::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf* _internal_mutable_chatcommandresponsemessagepb();
+  public:
+
+  // .ChatterBoxCore.Protocols.LogoutCommandResponseMessageProtoBuf LogoutCommandResponseMessagePB = 12;
+  bool has_logoutcommandresponsemessagepb() const;
+  private:
+  bool _internal_has_logoutcommandresponsemessagepb() const;
+  public:
+  void clear_logoutcommandresponsemessagepb();
+  const ::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf& logoutcommandresponsemessagepb() const;
+  ::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf* release_logoutcommandresponsemessagepb();
+  ::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf* mutable_logoutcommandresponsemessagepb();
+  void set_allocated_logoutcommandresponsemessagepb(::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf* logoutcommandresponsemessagepb);
+  private:
+  const ::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf& _internal_logoutcommandresponsemessagepb() const;
+  ::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf* _internal_mutable_logoutcommandresponsemessagepb();
+  public:
+
+  // .ChatterBoxCore.Protocols.ListUsersCommandResponseMessageProtoBuf ListUsersCommandResponseMessagePB = 13;
+  bool has_listuserscommandresponsemessagepb() const;
+  private:
+  bool _internal_has_listuserscommandresponsemessagepb() const;
+  public:
+  void clear_listuserscommandresponsemessagepb();
+  const ::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf& listuserscommandresponsemessagepb() const;
+  ::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf* release_listuserscommandresponsemessagepb();
+  ::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf* mutable_listuserscommandresponsemessagepb();
+  void set_allocated_listuserscommandresponsemessagepb(::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf* listuserscommandresponsemessagepb);
+  private:
+  const ::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf& _internal_listuserscommandresponsemessagepb() const;
+  ::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf* _internal_mutable_listuserscommandresponsemessagepb();
+  public:
+
+  void clear_ResponseData();
+  ResponseDataCase ResponseData_case() const;
+  // @@protoc_insertion_point(class_scope:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf)
  private:
   class _Internal;
+  void set_has_logincommandresponsemessagepb();
+  void set_has_registercommandresponsemessagepb();
+  void set_has_chatcommandresponsemessagepb();
+  void set_has_logoutcommandresponsemessagepb();
+  void set_has_listuserscommandresponsemessagepb();
+
+  inline bool has_ResponseData() const;
+  inline void clear_has_ResponseData();
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr responsemessage_;
+  bool status_;
   int commandresponsetype_;
+  union ResponseDataUnion {
+    ResponseDataUnion() {}
+    ::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf* logincommandresponsemessagepb_;
+    ::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf* registercommandresponsemessagepb_;
+    ::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf* chatcommandresponsemessagepb_;
+    ::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf* logoutcommandresponsemessagepb_;
+    ::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf* listuserscommandresponsemessagepb_;
+  } ResponseData_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
+
   friend struct ::TableStruct_ICommandResponseMessageProtoBuf_2eproto;
 };
 // ===================================================================
@@ -271,26 +414,335 @@ class ICommandResponseMessageProtoBuf :
 #endif  // __GNUC__
 // ICommandResponseMessageProtoBuf
 
-// .ChatterCore.Protocols.ICommandResponseMessageProtoBuf.CommandResponseTypeProtoBuf commandResponseType = 3;
+// bool status = 3;
+inline void ICommandResponseMessageProtoBuf::clear_status() {
+  status_ = false;
+}
+inline bool ICommandResponseMessageProtoBuf::_internal_status() const {
+  return status_;
+}
+inline bool ICommandResponseMessageProtoBuf::status() const {
+  // @@protoc_insertion_point(field_get:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.status)
+  return _internal_status();
+}
+inline void ICommandResponseMessageProtoBuf::_internal_set_status(bool value) {
+  
+  status_ = value;
+}
+inline void ICommandResponseMessageProtoBuf::set_status(bool value) {
+  _internal_set_status(value);
+  // @@protoc_insertion_point(field_set:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.status)
+}
+
+// string responseMessage = 4;
+inline void ICommandResponseMessageProtoBuf::clear_responsemessage() {
+  responsemessage_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& ICommandResponseMessageProtoBuf::responsemessage() const {
+  // @@protoc_insertion_point(field_get:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.responseMessage)
+  return _internal_responsemessage();
+}
+inline void ICommandResponseMessageProtoBuf::set_responsemessage(const std::string& value) {
+  _internal_set_responsemessage(value);
+  // @@protoc_insertion_point(field_set:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.responseMessage)
+}
+inline std::string* ICommandResponseMessageProtoBuf::mutable_responsemessage() {
+  // @@protoc_insertion_point(field_mutable:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.responseMessage)
+  return _internal_mutable_responsemessage();
+}
+inline const std::string& ICommandResponseMessageProtoBuf::_internal_responsemessage() const {
+  return responsemessage_.GetNoArena();
+}
+inline void ICommandResponseMessageProtoBuf::_internal_set_responsemessage(const std::string& value) {
+  
+  responsemessage_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void ICommandResponseMessageProtoBuf::set_responsemessage(std::string&& value) {
+  
+  responsemessage_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.responseMessage)
+}
+inline void ICommandResponseMessageProtoBuf::set_responsemessage(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  responsemessage_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.responseMessage)
+}
+inline void ICommandResponseMessageProtoBuf::set_responsemessage(const char* value, size_t size) {
+  
+  responsemessage_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.responseMessage)
+}
+inline std::string* ICommandResponseMessageProtoBuf::_internal_mutable_responsemessage() {
+  
+  return responsemessage_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* ICommandResponseMessageProtoBuf::release_responsemessage() {
+  // @@protoc_insertion_point(field_release:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.responseMessage)
+  
+  return responsemessage_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void ICommandResponseMessageProtoBuf::set_allocated_responsemessage(std::string* responsemessage) {
+  if (responsemessage != nullptr) {
+    
+  } else {
+    
+  }
+  responsemessage_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), responsemessage);
+  // @@protoc_insertion_point(field_set_allocated:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.responseMessage)
+}
+
+// .ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.CommandResponseTypeProtoBuf commandResponseType = 5;
 inline void ICommandResponseMessageProtoBuf::clear_commandresponsetype() {
   commandresponsetype_ = 0;
 }
-inline ::ChatterCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf ICommandResponseMessageProtoBuf::_internal_commandresponsetype() const {
-  return static_cast< ::ChatterCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf >(commandresponsetype_);
+inline ::ChatterBoxCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf ICommandResponseMessageProtoBuf::_internal_commandresponsetype() const {
+  return static_cast< ::ChatterBoxCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf >(commandresponsetype_);
 }
-inline ::ChatterCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf ICommandResponseMessageProtoBuf::commandresponsetype() const {
-  // @@protoc_insertion_point(field_get:ChatterCore.Protocols.ICommandResponseMessageProtoBuf.commandResponseType)
+inline ::ChatterBoxCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf ICommandResponseMessageProtoBuf::commandresponsetype() const {
+  // @@protoc_insertion_point(field_get:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.commandResponseType)
   return _internal_commandresponsetype();
 }
-inline void ICommandResponseMessageProtoBuf::_internal_set_commandresponsetype(::ChatterCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf value) {
+inline void ICommandResponseMessageProtoBuf::_internal_set_commandresponsetype(::ChatterBoxCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf value) {
   
   commandresponsetype_ = value;
 }
-inline void ICommandResponseMessageProtoBuf::set_commandresponsetype(::ChatterCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf value) {
+inline void ICommandResponseMessageProtoBuf::set_commandresponsetype(::ChatterBoxCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf value) {
   _internal_set_commandresponsetype(value);
-  // @@protoc_insertion_point(field_set:ChatterCore.Protocols.ICommandResponseMessageProtoBuf.commandResponseType)
+  // @@protoc_insertion_point(field_set:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.commandResponseType)
 }
 
+// .ChatterBoxCore.Protocols.LoginCommandResponseMessageProtoBuf LoginCommandResponseMessagePB = 9;
+inline bool ICommandResponseMessageProtoBuf::_internal_has_logincommandresponsemessagepb() const {
+  return ResponseData_case() == kLoginCommandResponseMessagePB;
+}
+inline bool ICommandResponseMessageProtoBuf::has_logincommandresponsemessagepb() const {
+  return _internal_has_logincommandresponsemessagepb();
+}
+inline void ICommandResponseMessageProtoBuf::set_has_logincommandresponsemessagepb() {
+  _oneof_case_[0] = kLoginCommandResponseMessagePB;
+}
+inline ::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::release_logincommandresponsemessagepb() {
+  // @@protoc_insertion_point(field_release:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.LoginCommandResponseMessagePB)
+  if (_internal_has_logincommandresponsemessagepb()) {
+    clear_has_ResponseData();
+      ::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf* temp = ResponseData_.logincommandresponsemessagepb_;
+    ResponseData_.logincommandresponsemessagepb_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf& ICommandResponseMessageProtoBuf::_internal_logincommandresponsemessagepb() const {
+  return _internal_has_logincommandresponsemessagepb()
+      ? *ResponseData_.logincommandresponsemessagepb_
+      : *reinterpret_cast< ::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf*>(&::ChatterBoxCore::Protocols::_LoginCommandResponseMessageProtoBuf_default_instance_);
+}
+inline const ::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf& ICommandResponseMessageProtoBuf::logincommandresponsemessagepb() const {
+  // @@protoc_insertion_point(field_get:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.LoginCommandResponseMessagePB)
+  return _internal_logincommandresponsemessagepb();
+}
+inline ::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::_internal_mutable_logincommandresponsemessagepb() {
+  if (!_internal_has_logincommandresponsemessagepb()) {
+    clear_ResponseData();
+    set_has_logincommandresponsemessagepb();
+    ResponseData_.logincommandresponsemessagepb_ = CreateMaybeMessage< ::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf >(
+        GetArenaNoVirtual());
+  }
+  return ResponseData_.logincommandresponsemessagepb_;
+}
+inline ::ChatterBoxCore::Protocols::LoginCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::mutable_logincommandresponsemessagepb() {
+  // @@protoc_insertion_point(field_mutable:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.LoginCommandResponseMessagePB)
+  return _internal_mutable_logincommandresponsemessagepb();
+}
+
+// .ChatterBoxCore.Protocols.RegisterCommandResponseMessageProtoBuf RegisterCommandResponseMessagePB = 10;
+inline bool ICommandResponseMessageProtoBuf::_internal_has_registercommandresponsemessagepb() const {
+  return ResponseData_case() == kRegisterCommandResponseMessagePB;
+}
+inline bool ICommandResponseMessageProtoBuf::has_registercommandresponsemessagepb() const {
+  return _internal_has_registercommandresponsemessagepb();
+}
+inline void ICommandResponseMessageProtoBuf::set_has_registercommandresponsemessagepb() {
+  _oneof_case_[0] = kRegisterCommandResponseMessagePB;
+}
+inline ::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::release_registercommandresponsemessagepb() {
+  // @@protoc_insertion_point(field_release:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.RegisterCommandResponseMessagePB)
+  if (_internal_has_registercommandresponsemessagepb()) {
+    clear_has_ResponseData();
+      ::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf* temp = ResponseData_.registercommandresponsemessagepb_;
+    ResponseData_.registercommandresponsemessagepb_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf& ICommandResponseMessageProtoBuf::_internal_registercommandresponsemessagepb() const {
+  return _internal_has_registercommandresponsemessagepb()
+      ? *ResponseData_.registercommandresponsemessagepb_
+      : *reinterpret_cast< ::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf*>(&::ChatterBoxCore::Protocols::_RegisterCommandResponseMessageProtoBuf_default_instance_);
+}
+inline const ::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf& ICommandResponseMessageProtoBuf::registercommandresponsemessagepb() const {
+  // @@protoc_insertion_point(field_get:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.RegisterCommandResponseMessagePB)
+  return _internal_registercommandresponsemessagepb();
+}
+inline ::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::_internal_mutable_registercommandresponsemessagepb() {
+  if (!_internal_has_registercommandresponsemessagepb()) {
+    clear_ResponseData();
+    set_has_registercommandresponsemessagepb();
+    ResponseData_.registercommandresponsemessagepb_ = CreateMaybeMessage< ::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf >(
+        GetArenaNoVirtual());
+  }
+  return ResponseData_.registercommandresponsemessagepb_;
+}
+inline ::ChatterBoxCore::Protocols::RegisterCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::mutable_registercommandresponsemessagepb() {
+  // @@protoc_insertion_point(field_mutable:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.RegisterCommandResponseMessagePB)
+  return _internal_mutable_registercommandresponsemessagepb();
+}
+
+// .ChatterBoxCore.Protocols.ChatCommandResponseMessageProtoBuf ChatCommandResponseMessagePB = 11;
+inline bool ICommandResponseMessageProtoBuf::_internal_has_chatcommandresponsemessagepb() const {
+  return ResponseData_case() == kChatCommandResponseMessagePB;
+}
+inline bool ICommandResponseMessageProtoBuf::has_chatcommandresponsemessagepb() const {
+  return _internal_has_chatcommandresponsemessagepb();
+}
+inline void ICommandResponseMessageProtoBuf::set_has_chatcommandresponsemessagepb() {
+  _oneof_case_[0] = kChatCommandResponseMessagePB;
+}
+inline ::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::release_chatcommandresponsemessagepb() {
+  // @@protoc_insertion_point(field_release:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.ChatCommandResponseMessagePB)
+  if (_internal_has_chatcommandresponsemessagepb()) {
+    clear_has_ResponseData();
+      ::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf* temp = ResponseData_.chatcommandresponsemessagepb_;
+    ResponseData_.chatcommandresponsemessagepb_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf& ICommandResponseMessageProtoBuf::_internal_chatcommandresponsemessagepb() const {
+  return _internal_has_chatcommandresponsemessagepb()
+      ? *ResponseData_.chatcommandresponsemessagepb_
+      : *reinterpret_cast< ::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf*>(&::ChatterBoxCore::Protocols::_ChatCommandResponseMessageProtoBuf_default_instance_);
+}
+inline const ::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf& ICommandResponseMessageProtoBuf::chatcommandresponsemessagepb() const {
+  // @@protoc_insertion_point(field_get:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.ChatCommandResponseMessagePB)
+  return _internal_chatcommandresponsemessagepb();
+}
+inline ::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::_internal_mutable_chatcommandresponsemessagepb() {
+  if (!_internal_has_chatcommandresponsemessagepb()) {
+    clear_ResponseData();
+    set_has_chatcommandresponsemessagepb();
+    ResponseData_.chatcommandresponsemessagepb_ = CreateMaybeMessage< ::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf >(
+        GetArenaNoVirtual());
+  }
+  return ResponseData_.chatcommandresponsemessagepb_;
+}
+inline ::ChatterBoxCore::Protocols::ChatCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::mutable_chatcommandresponsemessagepb() {
+  // @@protoc_insertion_point(field_mutable:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.ChatCommandResponseMessagePB)
+  return _internal_mutable_chatcommandresponsemessagepb();
+}
+
+// .ChatterBoxCore.Protocols.LogoutCommandResponseMessageProtoBuf LogoutCommandResponseMessagePB = 12;
+inline bool ICommandResponseMessageProtoBuf::_internal_has_logoutcommandresponsemessagepb() const {
+  return ResponseData_case() == kLogoutCommandResponseMessagePB;
+}
+inline bool ICommandResponseMessageProtoBuf::has_logoutcommandresponsemessagepb() const {
+  return _internal_has_logoutcommandresponsemessagepb();
+}
+inline void ICommandResponseMessageProtoBuf::set_has_logoutcommandresponsemessagepb() {
+  _oneof_case_[0] = kLogoutCommandResponseMessagePB;
+}
+inline ::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::release_logoutcommandresponsemessagepb() {
+  // @@protoc_insertion_point(field_release:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.LogoutCommandResponseMessagePB)
+  if (_internal_has_logoutcommandresponsemessagepb()) {
+    clear_has_ResponseData();
+      ::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf* temp = ResponseData_.logoutcommandresponsemessagepb_;
+    ResponseData_.logoutcommandresponsemessagepb_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf& ICommandResponseMessageProtoBuf::_internal_logoutcommandresponsemessagepb() const {
+  return _internal_has_logoutcommandresponsemessagepb()
+      ? *ResponseData_.logoutcommandresponsemessagepb_
+      : *reinterpret_cast< ::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf*>(&::ChatterBoxCore::Protocols::_LogoutCommandResponseMessageProtoBuf_default_instance_);
+}
+inline const ::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf& ICommandResponseMessageProtoBuf::logoutcommandresponsemessagepb() const {
+  // @@protoc_insertion_point(field_get:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.LogoutCommandResponseMessagePB)
+  return _internal_logoutcommandresponsemessagepb();
+}
+inline ::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::_internal_mutable_logoutcommandresponsemessagepb() {
+  if (!_internal_has_logoutcommandresponsemessagepb()) {
+    clear_ResponseData();
+    set_has_logoutcommandresponsemessagepb();
+    ResponseData_.logoutcommandresponsemessagepb_ = CreateMaybeMessage< ::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf >(
+        GetArenaNoVirtual());
+  }
+  return ResponseData_.logoutcommandresponsemessagepb_;
+}
+inline ::ChatterBoxCore::Protocols::LogoutCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::mutable_logoutcommandresponsemessagepb() {
+  // @@protoc_insertion_point(field_mutable:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.LogoutCommandResponseMessagePB)
+  return _internal_mutable_logoutcommandresponsemessagepb();
+}
+
+// .ChatterBoxCore.Protocols.ListUsersCommandResponseMessageProtoBuf ListUsersCommandResponseMessagePB = 13;
+inline bool ICommandResponseMessageProtoBuf::_internal_has_listuserscommandresponsemessagepb() const {
+  return ResponseData_case() == kListUsersCommandResponseMessagePB;
+}
+inline bool ICommandResponseMessageProtoBuf::has_listuserscommandresponsemessagepb() const {
+  return _internal_has_listuserscommandresponsemessagepb();
+}
+inline void ICommandResponseMessageProtoBuf::set_has_listuserscommandresponsemessagepb() {
+  _oneof_case_[0] = kListUsersCommandResponseMessagePB;
+}
+inline ::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::release_listuserscommandresponsemessagepb() {
+  // @@protoc_insertion_point(field_release:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.ListUsersCommandResponseMessagePB)
+  if (_internal_has_listuserscommandresponsemessagepb()) {
+    clear_has_ResponseData();
+      ::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf* temp = ResponseData_.listuserscommandresponsemessagepb_;
+    ResponseData_.listuserscommandresponsemessagepb_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf& ICommandResponseMessageProtoBuf::_internal_listuserscommandresponsemessagepb() const {
+  return _internal_has_listuserscommandresponsemessagepb()
+      ? *ResponseData_.listuserscommandresponsemessagepb_
+      : *reinterpret_cast< ::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf*>(&::ChatterBoxCore::Protocols::_ListUsersCommandResponseMessageProtoBuf_default_instance_);
+}
+inline const ::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf& ICommandResponseMessageProtoBuf::listuserscommandresponsemessagepb() const {
+  // @@protoc_insertion_point(field_get:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.ListUsersCommandResponseMessagePB)
+  return _internal_listuserscommandresponsemessagepb();
+}
+inline ::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::_internal_mutable_listuserscommandresponsemessagepb() {
+  if (!_internal_has_listuserscommandresponsemessagepb()) {
+    clear_ResponseData();
+    set_has_listuserscommandresponsemessagepb();
+    ResponseData_.listuserscommandresponsemessagepb_ = CreateMaybeMessage< ::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf >(
+        GetArenaNoVirtual());
+  }
+  return ResponseData_.listuserscommandresponsemessagepb_;
+}
+inline ::ChatterBoxCore::Protocols::ListUsersCommandResponseMessageProtoBuf* ICommandResponseMessageProtoBuf::mutable_listuserscommandresponsemessagepb() {
+  // @@protoc_insertion_point(field_mutable:ChatterBoxCore.Protocols.ICommandResponseMessageProtoBuf.ListUsersCommandResponseMessagePB)
+  return _internal_mutable_listuserscommandresponsemessagepb();
+}
+
+inline bool ICommandResponseMessageProtoBuf::has_ResponseData() const {
+  return ResponseData_case() != RESPONSEDATA_NOT_SET;
+}
+inline void ICommandResponseMessageProtoBuf::clear_has_ResponseData() {
+  _oneof_case_[0] = RESPONSEDATA_NOT_SET;
+}
+inline ICommandResponseMessageProtoBuf::ResponseDataCase ICommandResponseMessageProtoBuf::ResponseData_case() const {
+  return ICommandResponseMessageProtoBuf::ResponseDataCase(_oneof_case_[0]);
+}
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
@@ -298,14 +750,14 @@ inline void ICommandResponseMessageProtoBuf::set_commandresponsetype(::ChatterCo
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::ChatterCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf> : ::std::true_type {};
+template <> struct is_proto_enum< ::ChatterBoxCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ChatterCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf>() {
-  return ::ChatterCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::ChatterBoxCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf>() {
+  return ::ChatterBoxCore::Protocols::ICommandResponseMessageProtoBuf_CommandResponseTypeProtoBuf_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

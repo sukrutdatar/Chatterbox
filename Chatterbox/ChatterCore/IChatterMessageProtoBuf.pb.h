@@ -33,6 +33,7 @@
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
+#include "TextChatterMessageProtoBuf.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_IChatterMessageProtoBuf_2eproto
@@ -55,17 +56,17 @@ struct TableStruct_IChatterMessageProtoBuf_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_IChatterMessageProtoBuf_2eproto;
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 class IChatterMessageProtoBuf;
 class IChatterMessageProtoBufDefaultTypeInternal;
 extern IChatterMessageProtoBufDefaultTypeInternal _IChatterMessageProtoBuf_default_instance_;
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 PROTOBUF_NAMESPACE_OPEN
-template<> ::ChatterCore::Protocols::IChatterMessageProtoBuf* Arena::CreateMaybeMessage<::ChatterCore::Protocols::IChatterMessageProtoBuf>(Arena*);
+template<> ::ChatterBoxCore::Protocols::IChatterMessageProtoBuf* Arena::CreateMaybeMessage<::ChatterBoxCore::Protocols::IChatterMessageProtoBuf>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 
 enum IChatterMessageProtoBuf_ChatterTypeProtoBuf : int {
@@ -96,7 +97,7 @@ inline bool IChatterMessageProtoBuf_ChatterTypeProtoBuf_Parse(
 // ===================================================================
 
 class IChatterMessageProtoBuf :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ChatterCore.Protocols.IChatterMessageProtoBuf) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ChatterBoxCore.Protocols.IChatterMessageProtoBuf) */ {
  public:
   IChatterMessageProtoBuf();
   virtual ~IChatterMessageProtoBuf();
@@ -130,6 +131,11 @@ class IChatterMessageProtoBuf :
     return GetMetadataStatic().reflection;
   }
   static const IChatterMessageProtoBuf& default_instance();
+
+  enum ChatterDataCase {
+    kTextChatterMessagePB = 9,
+    CHATTERDATA_NOT_SET = 0,
+  };
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
   static inline const IChatterMessageProtoBuf* internal_default_instance() {
@@ -176,7 +182,7 @@ class IChatterMessageProtoBuf :
   void InternalSwap(IChatterMessageProtoBuf* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ChatterCore.Protocols.IChatterMessageProtoBuf";
+    return "ChatterBoxCore.Protocols.IChatterMessageProtoBuf";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -232,23 +238,51 @@ class IChatterMessageProtoBuf :
 
   enum : int {
     kChatterTypeFieldNumber = 3,
+    kTextChatterMessagePBFieldNumber = 9,
   };
-  // .ChatterCore.Protocols.IChatterMessageProtoBuf.ChatterTypeProtoBuf chatterType = 3;
+  // .ChatterBoxCore.Protocols.IChatterMessageProtoBuf.ChatterTypeProtoBuf chatterType = 3;
   void clear_chattertype();
-  ::ChatterCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf chattertype() const;
-  void set_chattertype(::ChatterCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf value);
+  ::ChatterBoxCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf chattertype() const;
+  void set_chattertype(::ChatterBoxCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf value);
   private:
-  ::ChatterCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf _internal_chattertype() const;
-  void _internal_set_chattertype(::ChatterCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf value);
+  ::ChatterBoxCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf _internal_chattertype() const;
+  void _internal_set_chattertype(::ChatterBoxCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ChatterCore.Protocols.IChatterMessageProtoBuf)
+  // .ChatterBoxCore.Protocols.TextChatterMessageProtoBuf TextChatterMessagePB = 9;
+  bool has_textchattermessagepb() const;
+  private:
+  bool _internal_has_textchattermessagepb() const;
+  public:
+  void clear_textchattermessagepb();
+  const ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf& textchattermessagepb() const;
+  ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf* release_textchattermessagepb();
+  ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf* mutable_textchattermessagepb();
+  void set_allocated_textchattermessagepb(::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf* textchattermessagepb);
+  private:
+  const ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf& _internal_textchattermessagepb() const;
+  ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf* _internal_mutable_textchattermessagepb();
+  public:
+
+  void clear_ChatterData();
+  ChatterDataCase ChatterData_case() const;
+  // @@protoc_insertion_point(class_scope:ChatterBoxCore.Protocols.IChatterMessageProtoBuf)
  private:
   class _Internal;
+  void set_has_textchattermessagepb();
+
+  inline bool has_ChatterData() const;
+  inline void clear_has_ChatterData();
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   int chattertype_;
+  union ChatterDataUnion {
+    ChatterDataUnion() {}
+    ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf* textchattermessagepb_;
+  } ChatterData_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
+
   friend struct ::TableStruct_IChatterMessageProtoBuf_2eproto;
 };
 // ===================================================================
@@ -262,26 +296,79 @@ class IChatterMessageProtoBuf :
 #endif  // __GNUC__
 // IChatterMessageProtoBuf
 
-// .ChatterCore.Protocols.IChatterMessageProtoBuf.ChatterTypeProtoBuf chatterType = 3;
+// .ChatterBoxCore.Protocols.IChatterMessageProtoBuf.ChatterTypeProtoBuf chatterType = 3;
 inline void IChatterMessageProtoBuf::clear_chattertype() {
   chattertype_ = 0;
 }
-inline ::ChatterCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf IChatterMessageProtoBuf::_internal_chattertype() const {
-  return static_cast< ::ChatterCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf >(chattertype_);
+inline ::ChatterBoxCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf IChatterMessageProtoBuf::_internal_chattertype() const {
+  return static_cast< ::ChatterBoxCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf >(chattertype_);
 }
-inline ::ChatterCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf IChatterMessageProtoBuf::chattertype() const {
-  // @@protoc_insertion_point(field_get:ChatterCore.Protocols.IChatterMessageProtoBuf.chatterType)
+inline ::ChatterBoxCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf IChatterMessageProtoBuf::chattertype() const {
+  // @@protoc_insertion_point(field_get:ChatterBoxCore.Protocols.IChatterMessageProtoBuf.chatterType)
   return _internal_chattertype();
 }
-inline void IChatterMessageProtoBuf::_internal_set_chattertype(::ChatterCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf value) {
+inline void IChatterMessageProtoBuf::_internal_set_chattertype(::ChatterBoxCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf value) {
   
   chattertype_ = value;
 }
-inline void IChatterMessageProtoBuf::set_chattertype(::ChatterCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf value) {
+inline void IChatterMessageProtoBuf::set_chattertype(::ChatterBoxCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf value) {
   _internal_set_chattertype(value);
-  // @@protoc_insertion_point(field_set:ChatterCore.Protocols.IChatterMessageProtoBuf.chatterType)
+  // @@protoc_insertion_point(field_set:ChatterBoxCore.Protocols.IChatterMessageProtoBuf.chatterType)
 }
 
+// .ChatterBoxCore.Protocols.TextChatterMessageProtoBuf TextChatterMessagePB = 9;
+inline bool IChatterMessageProtoBuf::_internal_has_textchattermessagepb() const {
+  return ChatterData_case() == kTextChatterMessagePB;
+}
+inline bool IChatterMessageProtoBuf::has_textchattermessagepb() const {
+  return _internal_has_textchattermessagepb();
+}
+inline void IChatterMessageProtoBuf::set_has_textchattermessagepb() {
+  _oneof_case_[0] = kTextChatterMessagePB;
+}
+inline ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf* IChatterMessageProtoBuf::release_textchattermessagepb() {
+  // @@protoc_insertion_point(field_release:ChatterBoxCore.Protocols.IChatterMessageProtoBuf.TextChatterMessagePB)
+  if (_internal_has_textchattermessagepb()) {
+    clear_has_ChatterData();
+      ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf* temp = ChatterData_.textchattermessagepb_;
+    ChatterData_.textchattermessagepb_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf& IChatterMessageProtoBuf::_internal_textchattermessagepb() const {
+  return _internal_has_textchattermessagepb()
+      ? *ChatterData_.textchattermessagepb_
+      : *reinterpret_cast< ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf*>(&::ChatterBoxCore::Protocols::_TextChatterMessageProtoBuf_default_instance_);
+}
+inline const ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf& IChatterMessageProtoBuf::textchattermessagepb() const {
+  // @@protoc_insertion_point(field_get:ChatterBoxCore.Protocols.IChatterMessageProtoBuf.TextChatterMessagePB)
+  return _internal_textchattermessagepb();
+}
+inline ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf* IChatterMessageProtoBuf::_internal_mutable_textchattermessagepb() {
+  if (!_internal_has_textchattermessagepb()) {
+    clear_ChatterData();
+    set_has_textchattermessagepb();
+    ChatterData_.textchattermessagepb_ = CreateMaybeMessage< ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf >(
+        GetArenaNoVirtual());
+  }
+  return ChatterData_.textchattermessagepb_;
+}
+inline ::ChatterBoxCore::Protocols::TextChatterMessageProtoBuf* IChatterMessageProtoBuf::mutable_textchattermessagepb() {
+  // @@protoc_insertion_point(field_mutable:ChatterBoxCore.Protocols.IChatterMessageProtoBuf.TextChatterMessagePB)
+  return _internal_mutable_textchattermessagepb();
+}
+
+inline bool IChatterMessageProtoBuf::has_ChatterData() const {
+  return ChatterData_case() != CHATTERDATA_NOT_SET;
+}
+inline void IChatterMessageProtoBuf::clear_has_ChatterData() {
+  _oneof_case_[0] = CHATTERDATA_NOT_SET;
+}
+inline IChatterMessageProtoBuf::ChatterDataCase IChatterMessageProtoBuf::ChatterData_case() const {
+  return IChatterMessageProtoBuf::ChatterDataCase(_oneof_case_[0]);
+}
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
@@ -289,14 +376,14 @@ inline void IChatterMessageProtoBuf::set_chattertype(::ChatterCore::Protocols::I
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::ChatterCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf> : ::std::true_type {};
+template <> struct is_proto_enum< ::ChatterBoxCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::ChatterCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf>() {
-  return ::ChatterCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::ChatterBoxCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf>() {
+  return ::ChatterBoxCore::Protocols::IChatterMessageProtoBuf_ChatterTypeProtoBuf_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

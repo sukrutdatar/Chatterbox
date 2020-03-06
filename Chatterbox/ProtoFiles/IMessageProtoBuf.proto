@@ -1,5 +1,8 @@
 syntax = "proto3";
-package ChatterCore.Protocols;
+package ChatterBoxCore.Protocols;
+import "IChatterMessageProtoBuf.proto";
+import "ICommandMessageProtoBuf.proto";
+import "ICommandResponseMessageProtoBuf.proto";
 
 message IMessageProtoBuf {
 	enum MessageTypeProtoBuf
@@ -11,4 +14,9 @@ message IMessageProtoBuf {
 
 	MessageTypeProtoBuf messageType = 1;
 	string sessionKey = 2;
+	oneof MessageData {
+		IChatterMessageProtoBuf IChatterMessagePB = 9;
+		ICommandMessageProtoBuf ICommandMessagePB = 10;
+		ICommandResponseMessageProtoBuf ICommandResponseMessagePB = 11;
+	}
 }

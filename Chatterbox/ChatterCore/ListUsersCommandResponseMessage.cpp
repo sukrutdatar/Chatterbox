@@ -9,8 +9,8 @@ ListUsersCommandResponseMessage::ListUsersCommandResponseMessage() :
 {
 }
 
-ListUsersCommandResponseMessage::ListUsersCommandResponseMessage(std::string sessionKey, std::vector<std::string> activeUsers) :
-	ICommandResponseMessage(ListUsersCommandResponse, sessionKey),
+ListUsersCommandResponseMessage::ListUsersCommandResponseMessage(std::string sessionKey, std::vector<std::string> activeUsers, bool status, std::string responseMessage) :
+	ICommandResponseMessage(ListUsersCommandResponse, status, responseMessage, sessionKey),
 	m_activeUsers(activeUsers)
 {
 }
@@ -33,7 +33,7 @@ std::vector<std::string> ListUsersCommandResponseMessage::GetActiveUsers()
 std::string ListUsersCommandResponseMessage::ToString()
 {
 	std::stringstream ss;
-	ss << "ListUsersCommandResponseMessage { SessionKey: " << m_sessionKey << ", ActiveUsers: " << Util::Vector2String(m_activeUsers) << " }";
+	ss << "ListUsersCommandResponseMessage { SessionKey: " << m_sessionKey << ", ActiveUsers: " << Util::Vector2String(m_activeUsers) << ", Status: " << Util::Bool2String(m_status) << ", ResponseMessage: " << m_responseMessage << " }";
 	return ss.str();
 }
 

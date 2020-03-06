@@ -54,23 +54,23 @@ struct TableStruct_ChatCommandMessageProtoBuf_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ChatCommandMessageProtoBuf_2eproto;
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 class ChatCommandMessageProtoBuf;
 class ChatCommandMessageProtoBufDefaultTypeInternal;
 extern ChatCommandMessageProtoBufDefaultTypeInternal _ChatCommandMessageProtoBuf_default_instance_;
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 PROTOBUF_NAMESPACE_OPEN
-template<> ::ChatterCore::Protocols::ChatCommandMessageProtoBuf* Arena::CreateMaybeMessage<::ChatterCore::Protocols::ChatCommandMessageProtoBuf>(Arena*);
+template<> ::ChatterBoxCore::Protocols::ChatCommandMessageProtoBuf* Arena::CreateMaybeMessage<::ChatterBoxCore::Protocols::ChatCommandMessageProtoBuf>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 
 // ===================================================================
 
 class ChatCommandMessageProtoBuf :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ChatterCore.Protocols.ChatCommandMessageProtoBuf) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ChatterBoxCore.Protocols.ChatCommandMessageProtoBuf) */ {
  public:
   ChatCommandMessageProtoBuf();
   virtual ~ChatCommandMessageProtoBuf();
@@ -150,7 +150,7 @@ class ChatCommandMessageProtoBuf :
   void InternalSwap(ChatCommandMessageProtoBuf* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ChatterCore.Protocols.ChatCommandMessageProtoBuf";
+    return "ChatterBoxCore.Protocols.ChatCommandMessageProtoBuf";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -193,7 +193,7 @@ class ChatCommandMessageProtoBuf :
   std::string* _internal_mutable_chatwithuser();
   public:
 
-  // @@protoc_insertion_point(class_scope:ChatterCore.Protocols.ChatCommandMessageProtoBuf)
+  // @@protoc_insertion_point(class_scope:ChatterBoxCore.Protocols.ChatCommandMessageProtoBuf)
  private:
   class _Internal;
 
@@ -218,15 +218,15 @@ inline void ChatCommandMessageProtoBuf::clear_chatwithuser() {
   chatwithuser_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& ChatCommandMessageProtoBuf::chatwithuser() const {
-  // @@protoc_insertion_point(field_get:ChatterCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
+  // @@protoc_insertion_point(field_get:ChatterBoxCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
   return _internal_chatwithuser();
 }
 inline void ChatCommandMessageProtoBuf::set_chatwithuser(const std::string& value) {
   _internal_set_chatwithuser(value);
-  // @@protoc_insertion_point(field_set:ChatterCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
+  // @@protoc_insertion_point(field_set:ChatterBoxCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
 }
 inline std::string* ChatCommandMessageProtoBuf::mutable_chatwithuser() {
-  // @@protoc_insertion_point(field_mutable:ChatterCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
+  // @@protoc_insertion_point(field_mutable:ChatterBoxCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
   return _internal_mutable_chatwithuser();
 }
 inline const std::string& ChatCommandMessageProtoBuf::_internal_chatwithuser() const {
@@ -240,26 +240,26 @@ inline void ChatCommandMessageProtoBuf::set_chatwithuser(std::string&& value) {
   
   chatwithuser_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:ChatterCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
+  // @@protoc_insertion_point(field_set_rvalue:ChatterBoxCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
 }
 inline void ChatCommandMessageProtoBuf::set_chatwithuser(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   chatwithuser_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:ChatterCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
+  // @@protoc_insertion_point(field_set_char:ChatterBoxCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
 }
 inline void ChatCommandMessageProtoBuf::set_chatwithuser(const char* value, size_t size) {
   
   chatwithuser_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:ChatterCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
+  // @@protoc_insertion_point(field_set_pointer:ChatterBoxCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
 }
 inline std::string* ChatCommandMessageProtoBuf::_internal_mutable_chatwithuser() {
   
   return chatwithuser_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* ChatCommandMessageProtoBuf::release_chatwithuser() {
-  // @@protoc_insertion_point(field_release:ChatterCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
+  // @@protoc_insertion_point(field_release:ChatterBoxCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
   
   return chatwithuser_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -270,7 +270,7 @@ inline void ChatCommandMessageProtoBuf::set_allocated_chatwithuser(std::string* 
     
   }
   chatwithuser_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), chatwithuser);
-  // @@protoc_insertion_point(field_set_allocated:ChatterCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
+  // @@protoc_insertion_point(field_set_allocated:ChatterBoxCore.Protocols.ChatCommandMessageProtoBuf.chatWithUser)
 }
 
 #ifdef __GNUC__
@@ -280,7 +280,7 @@ inline void ChatCommandMessageProtoBuf::set_allocated_chatwithuser(std::string* 
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 
 // @@protoc_insertion_point(global_scope)
 

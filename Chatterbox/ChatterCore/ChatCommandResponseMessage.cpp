@@ -7,6 +7,10 @@ ChatCommandResponseMessage::ChatCommandResponseMessage() :
 {
 }
 
+ChatCommandResponseMessage::ChatCommandResponseMessage(bool status, std::string responseMessage) :
+	ICommandResponseMessage(ChatCommandResponse, status, responseMessage)
+{
+}
 
 ChatCommandResponseMessage::~ChatCommandResponseMessage()
 {
@@ -15,7 +19,7 @@ ChatCommandResponseMessage::~ChatCommandResponseMessage()
 std::string ChatCommandResponseMessage::ToString()
 {
 	std::stringstream ss;
-	ss << "ChatCommandResponseMessage { SessionKey: " << m_sessionKey <<  " }";
+	ss << "ChatCommandResponseMessage { SessionKey: " << m_sessionKey << ", Status: " << Util::Bool2String(m_status) << ", ResponseMessage: " << m_responseMessage << " }";
 	return ss.str();
 }
 

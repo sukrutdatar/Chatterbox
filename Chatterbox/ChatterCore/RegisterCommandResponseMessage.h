@@ -9,14 +9,11 @@ namespace ChatterBoxCore
 	{
 	private:
 		std::string m_recoveryKey;
-		bool m_status;
 	public:
 		RegisterCommandResponseMessage();
-		RegisterCommandResponseMessage(std::string, bool);
+		RegisterCommandResponseMessage(std::string, bool, std::string);
 		virtual ~RegisterCommandResponseMessage();
 
-		bool GetStatus();
-		void SetStatus(bool);
 
 		std::string GetRecoveryKey();
 		void SetRecoveryKey(std::string);

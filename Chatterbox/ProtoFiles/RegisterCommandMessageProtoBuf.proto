@@ -1,5 +1,5 @@
 syntax = "proto3";
-package ChatterCore.Protocols;
+package ChatterBoxCore.Protocols;
 
 message RegisterCommandMessageProtoBuf
 {

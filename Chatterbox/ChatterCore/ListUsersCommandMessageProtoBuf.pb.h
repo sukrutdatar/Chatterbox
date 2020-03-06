@@ -54,23 +54,23 @@ struct TableStruct_ListUsersCommandMessageProtoBuf_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ListUsersCommandMessageProtoBuf_2eproto;
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 class ListUsersCommandMessageProtoBuf;
 class ListUsersCommandMessageProtoBufDefaultTypeInternal;
 extern ListUsersCommandMessageProtoBufDefaultTypeInternal _ListUsersCommandMessageProtoBuf_default_instance_;
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 PROTOBUF_NAMESPACE_OPEN
-template<> ::ChatterCore::Protocols::ListUsersCommandMessageProtoBuf* Arena::CreateMaybeMessage<::ChatterCore::Protocols::ListUsersCommandMessageProtoBuf>(Arena*);
+template<> ::ChatterBoxCore::Protocols::ListUsersCommandMessageProtoBuf* Arena::CreateMaybeMessage<::ChatterBoxCore::Protocols::ListUsersCommandMessageProtoBuf>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 
 // ===================================================================
 
 class ListUsersCommandMessageProtoBuf :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf) */ {
  public:
   ListUsersCommandMessageProtoBuf();
   virtual ~ListUsersCommandMessageProtoBuf();
@@ -150,7 +150,7 @@ class ListUsersCommandMessageProtoBuf :
   void InternalSwap(ListUsersCommandMessageProtoBuf* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ChatterCore.Protocols.ListUsersCommandMessageProtoBuf";
+    return "ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -174,7 +174,7 @@ class ListUsersCommandMessageProtoBuf :
 
   // accessors -------------------------------------------------------
 
-  // @@protoc_insertion_point(class_scope:ChatterCore.Protocols.ListUsersCommandMessageProtoBuf)
+  // @@protoc_insertion_point(class_scope:ChatterBoxCore.Protocols.ListUsersCommandMessageProtoBuf)
  private:
   class _Internal;
 
@@ -200,7 +200,7 @@ class ListUsersCommandMessageProtoBuf :
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 
 // @@protoc_insertion_point(global_scope)
 

@@ -108,6 +108,9 @@
     <ClInclude Include="TextChatterMessageProtoBuf.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MessageConverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -196,6 +199,9 @@
     </ClCompile>
     <ClCompile Include="ChatCommandMessageProtoBuf.pb.cc">
       <Filter>Source Files\ProtoBuf</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageConverter.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

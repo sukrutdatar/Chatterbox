@@ -1,5 +1,6 @@
 syntax = "proto3";
-package ChatterCore.Protocols;
+package ChatterBoxCore.Protocols;
+import "TextChatterMessageProtoBuf.proto";
 
 message IChatterMessageProtoBuf {
 	enum ChatterTypeProtoBuf
@@ -9,4 +10,7 @@ message IChatterMessageProtoBuf {
 	}
 
 	ChatterTypeProtoBuf chatterType = 3;
+	oneof ChatterData {
+		TextChatterMessageProtoBuf TextChatterMessagePB = 9;
+	}
 }

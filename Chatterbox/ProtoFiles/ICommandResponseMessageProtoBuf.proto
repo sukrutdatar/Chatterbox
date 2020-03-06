@@ -1,5 +1,10 @@
 syntax = "proto3";
-package ChatterCore.Protocols;
+package ChatterBoxCore.Protocols;
+import "LoginCommandResponseMessageProtoBuf.proto";
+import "RegisterCommandResponseMessageProtoBuf.proto";
+import "ChatCommandResponseMessageProtoBuf.proto";
+import "LogoutCommandResponseMessageProtoBuf.proto";
+import "ListUsersCommandResponseMessageProtoBuf.proto";
 
 message ICommandResponseMessageProtoBuf
 {
@@ -12,5 +17,14 @@ message ICommandResponseMessageProtoBuf
 		ListUsersCommandResponse = 4;
 	}
 
-	CommandResponseTypeProtoBuf commandResponseType = 3;
+	bool status = 3;
+	string responseMessage = 4;
+	CommandResponseTypeProtoBuf commandResponseType = 5;
+	oneof ResponseData {
+		LoginCommandResponseMessageProtoBuf LoginCommandResponseMessagePB = 9;
+		RegisterCommandResponseMessageProtoBuf RegisterCommandResponseMessagePB = 10;
+		ChatCommandResponseMessageProtoBuf ChatCommandResponseMessagePB = 11;
+		LogoutCommandResponseMessageProtoBuf LogoutCommandResponseMessagePB = 12;
+		ListUsersCommandResponseMessageProtoBuf ListUsersCommandResponseMessagePB = 13;
+	}
 }

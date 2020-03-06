@@ -4,15 +4,13 @@ using namespace ChatterBoxCore;
 
 RegisterCommandResponseMessage::RegisterCommandResponseMessage() :
 	ICommandResponseMessage(RegisterCommandResponse),
-	m_recoveryKey(""),
-	m_status(false)
+	m_recoveryKey("")
 {
 }
 
-RegisterCommandResponseMessage::RegisterCommandResponseMessage(std::string recoveryKey, bool status) :
-	ICommandResponseMessage(RegisterCommandResponse),
-	m_recoveryKey(recoveryKey),
-	m_status(status)
+RegisterCommandResponseMessage::RegisterCommandResponseMessage(std::string recoveryKey, bool status, std::string responseMessage) :
+	ICommandResponseMessage(RegisterCommandResponse, status, responseMessage),
+	m_recoveryKey(recoveryKey)
 {
 }
 
@@ -30,20 +28,10 @@ void RegisterCommandResponseMessage::SetRecoveryKey(std::string recoveryKey)
 	m_recoveryKey = recoveryKey;
 }
 
-void RegisterCommandResponseMessage::SetStatus(bool status)
-{
-	m_status = status;
-}
-
-bool RegisterCommandResponseMessage::GetStatus()
-{
-	return m_status;
-}
-
 std::string RegisterCommandResponseMessage::ToString()
 {
 	std::stringstream ss;
-	ss << "RegisterCommandResponseMessage { RecoveryKey: " << m_recoveryKey << ", Status: " << Util::Bool2String(m_status) << " }";
+	ss << "RegisterCommandResponseMessage { RecoveryKey: " << m_recoveryKey << ", Status: " << Util::Bool2String(m_status) << ", ResponseMessage: " << m_responseMessage << " }";
 	return ss.str();
 }
 

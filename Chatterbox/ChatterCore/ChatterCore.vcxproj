@@ -72,25 +72,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\google\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\google\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\google\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\google\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
@@ -185,6 +185,7 @@
     <ClInclude Include="LogoutCommandMessage.h" />
     <ClInclude Include="LogoutCommandMessageProtoBuf.pb.h" />
     <ClInclude Include="LogoutCommandResponseMessage.h" />
+    <ClInclude Include="MessageConverter.h" />
     <ClInclude Include="RegisterCommandMessage.h" />
     <ClInclude Include="RegisterCommandMessageProtoBuf.pb.h" />
     <ClInclude Include="RegisterCommandResponseMessage.h" />
@@ -217,6 +218,7 @@
     <ClCompile Include="LogoutCommandMessage.cpp" />
     <ClCompile Include="LogoutCommandMessageProtoBuf.pb.cc" />
     <ClCompile Include="LogoutCommandResponseMessage.cpp" />
+    <ClCompile Include="MessageConverter.cpp" />
     <ClCompile Include="RegisterCommandMessage.cpp" />
     <ClCompile Include="RegisterCommandMessageProtoBuf.pb.cc" />
     <ClCompile Include="RegisterCommandResponseMessage.cpp" />

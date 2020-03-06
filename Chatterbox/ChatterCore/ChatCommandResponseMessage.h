@@ -8,6 +8,7 @@ namespace ChatterBoxCore
 	{
 	public:
 		ChatCommandResponseMessage();
+		ChatCommandResponseMessage(bool, std::string);
 		virtual ~ChatCommandResponseMessage();
 
 		virtual std::string ToString();

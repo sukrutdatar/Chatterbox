@@ -1,5 +1,10 @@
 syntax = "proto3";
-package ChatterCore.Protocols;
+package ChatterBoxCore.Protocols;
+import "ChatCommandMessageProtoBuf.proto";
+import "ListUsersCommandMessageProtoBuf.proto";
+import "LoginCommandMessageProtoBuf.proto";
+import "LogoutCommandMessageProtoBuf.proto";
+import "RegisterCommandMessageProtoBuf.proto";
 
 message ICommandMessageProtoBuf {
 	enum CommandTypeProtoBuf
@@ -12,4 +17,11 @@ message ICommandMessageProtoBuf {
 	}
 
 	CommandTypeProtoBuf commandType = 3;
+	oneof CommandData {
+		RegisterCommandMessageProtoBuf RegisterCommandMessagePB = 9;
+		LoginCommandMessageProtoBuf LoginCommandMessagePB = 10;
+		LogoutCommandMessageProtoBuf LogoutCommandMessagePB = 11;
+		ChatCommandMessageProtoBuf ChatCommandMessagePB = 12;
+		ListUsersCommandMessageProtoBuf ListUsersCommandMessagePB = 13;
+	}
 }

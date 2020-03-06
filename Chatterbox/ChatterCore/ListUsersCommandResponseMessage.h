@@ -13,7 +13,7 @@ namespace ChatterBoxCore
 		std::vector<std::string> m_activeUsers;
 	public:
 		ListUsersCommandResponseMessage();
-		ListUsersCommandResponseMessage(std::string, std::vector<std::string>);
+		ListUsersCommandResponseMessage(std::string, std::vector<std::string>, bool, std::string);
 		virtual ~ListUsersCommandResponseMessage();
 
 		void SetActiveUsers(std::vector<std::string>);

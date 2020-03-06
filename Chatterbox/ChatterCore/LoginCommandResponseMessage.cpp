@@ -3,41 +3,17 @@
 using namespace ChatterBoxCore;
 
 LoginCommandResponseMessage::LoginCommandResponseMessage() :
-	ICommandResponseMessage(LoginCommandResponse),
-	m_status(false),
-	m_responseMessage("")
+	ICommandResponseMessage(LoginCommandResponse)
 {
 }
 
 LoginCommandResponseMessage::LoginCommandResponseMessage(std::string sessionKey, bool status, std::string responseMessage = "") :
-	ICommandResponseMessage(LoginCommandResponse, sessionKey),
-	m_status(status),
-	m_responseMessage(responseMessage)
+	ICommandResponseMessage(LoginCommandResponse, status, responseMessage, sessionKey)
 {
 }
 
 LoginCommandResponseMessage::~LoginCommandResponseMessage()
 {
-}
-
-bool LoginCommandResponseMessage::GetStatus()
-{
-	return m_status;
-}
-
-void LoginCommandResponseMessage::SetStatus(bool status)
-{
-	m_status = status;
-}
-
-std::string LoginCommandResponseMessage::GetResponseMessage()
-{
-	return m_responseMessage;
-}
-
-void LoginCommandResponseMessage::SetResponseMessage(std::string responseMessage)
-{
-	m_responseMessage = responseMessage;
 }
 
 std::string LoginCommandResponseMessage::ToString()

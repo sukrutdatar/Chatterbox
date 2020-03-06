@@ -97,11 +97,23 @@ namespace ChatterBoxCore
 	{
 	protected:
 		CommandResponseType m_commandResponseType;
+		bool m_status;
+		std::string m_responseMessage;
+
 	public:
-		ICommandResponseMessage(CommandResponseType commandResponseType, std::string sessionKey = "") : 
+		ICommandResponseMessage(CommandResponseType commandResponseType, bool status = false, std::string responseMessage = "", std::string sessionKey = "") : 
 			IMessage(CommandResponseMessage, sessionKey), 
-			m_commandResponseType(commandResponseType)
+			m_commandResponseType(commandResponseType),
+			m_status(status),
+			m_responseMessage(responseMessage)
 		{}
+
+		bool GetStatus();
+		void SetStatus(bool);
+
+		std::string GetResponseMessage();
+		void SetResponseMessage(std::string);
+
 		virtual ~ICommandResponseMessage() {}
 	};
 

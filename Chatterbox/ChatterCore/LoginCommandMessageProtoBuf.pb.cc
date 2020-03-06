@@ -14,23 +14,23 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 class LoginCommandMessageProtoBufDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LoginCommandMessageProtoBuf> _instance;
 } _LoginCommandMessageProtoBuf_default_instance_;
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 static void InitDefaultsscc_info_LoginCommandMessageProtoBuf_LoginCommandMessageProtoBuf_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ChatterCore::Protocols::_LoginCommandMessageProtoBuf_default_instance_;
-    new (ptr) ::ChatterCore::Protocols::LoginCommandMessageProtoBuf();
+    void* ptr = &::ChatterBoxCore::Protocols::_LoginCommandMessageProtoBuf_default_instance_;
+    new (ptr) ::ChatterBoxCore::Protocols::LoginCommandMessageProtoBuf();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ChatterCore::Protocols::LoginCommandMessageProtoBuf::InitAsDefaultInstance();
+  ::ChatterBoxCore::Protocols::LoginCommandMessageProtoBuf::InitAsDefaultInstance();
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LoginCommandMessageProtoBuf_LoginCommandMessageProtoBuf_2eproto =
@@ -42,26 +42,26 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_LoginCommandMessageProtoBuf_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ChatterCore::Protocols::LoginCommandMessageProtoBuf, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ChatterBoxCore::Protocols::LoginCommandMessageProtoBuf, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ChatterCore::Protocols::LoginCommandMessageProtoBuf, username_),
-  PROTOBUF_FIELD_OFFSET(::ChatterCore::Protocols::LoginCommandMessageProtoBuf, password_),
+  PROTOBUF_FIELD_OFFSET(::ChatterBoxCore::Protocols::LoginCommandMessageProtoBuf, username_),
+  PROTOBUF_FIELD_OFFSET(::ChatterBoxCore::Protocols::LoginCommandMessageProtoBuf, password_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::ChatterCore::Protocols::LoginCommandMessageProtoBuf)},
+  { 0, -1, sizeof(::ChatterBoxCore::Protocols::LoginCommandMessageProtoBuf)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ChatterCore::Protocols::_LoginCommandMessageProtoBuf_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ChatterBoxCore::Protocols::_LoginCommandMessageProtoBuf_default_instance_),
 };
 
 const char descriptor_table_protodef_LoginCommandMessageProtoBuf_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n!LoginCommandMessageProtoBuf.proto\022\025Cha"
-  "tterCore.Protocols\"A\n\033LoginCommandMessag"
-  "eProtoBuf\022\020\n\010username\030\004 \001(\t\022\020\n\010password\030"
-  "\005 \001(\tb\006proto3"
+  "\n!LoginCommandMessageProtoBuf.proto\022\030Cha"
+  "tterBoxCore.Protocols\"A\n\033LoginCommandMes"
+  "sageProtoBuf\022\020\n\010username\030\004 \001(\t\022\020\n\010passwo"
+  "rd\030\005 \001(\tb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_LoginCommandMessageProtoBuf_2eproto_deps[1] = {
 };
@@ -71,7 +71,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Log
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_LoginCommandMessageProtoBuf_2eproto_once;
 static bool descriptor_table_LoginCommandMessageProtoBuf_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_LoginCommandMessageProtoBuf_2eproto = {
-  &descriptor_table_LoginCommandMessageProtoBuf_2eproto_initialized, descriptor_table_protodef_LoginCommandMessageProtoBuf_2eproto, "LoginCommandMessageProtoBuf.proto", 133,
+  &descriptor_table_LoginCommandMessageProtoBuf_2eproto_initialized, descriptor_table_protodef_LoginCommandMessageProtoBuf_2eproto, "LoginCommandMessageProtoBuf.proto", 136,
   &descriptor_table_LoginCommandMessageProtoBuf_2eproto_once, descriptor_table_LoginCommandMessageProtoBuf_2eproto_sccs, descriptor_table_LoginCommandMessageProtoBuf_2eproto_deps, 1, 0,
   schemas, file_default_instances, TableStruct_LoginCommandMessageProtoBuf_2eproto::offsets,
   file_level_metadata_LoginCommandMessageProtoBuf_2eproto, 1, file_level_enum_descriptors_LoginCommandMessageProtoBuf_2eproto, file_level_service_descriptors_LoginCommandMessageProtoBuf_2eproto,
@@ -79,7 +79,7 @@ const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_LoginC
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_LoginCommandMessageProtoBuf_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_LoginCommandMessageProtoBuf_2eproto), true);
-namespace ChatterCore {
+namespace ChatterBoxCore {
 namespace Protocols {
 
 // ===================================================================
@@ -93,7 +93,7 @@ class LoginCommandMessageProtoBuf::_Internal {
 LoginCommandMessageProtoBuf::LoginCommandMessageProtoBuf()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:ChatterCore.Protocols.LoginCommandMessageProtoBuf)
+  // @@protoc_insertion_point(constructor:ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf)
 }
 LoginCommandMessageProtoBuf::LoginCommandMessageProtoBuf(const LoginCommandMessageProtoBuf& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -107,7 +107,7 @@ LoginCommandMessageProtoBuf::LoginCommandMessageProtoBuf(const LoginCommandMessa
   if (!from._internal_password().empty()) {
     password_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.password_);
   }
-  // @@protoc_insertion_point(copy_constructor:ChatterCore.Protocols.LoginCommandMessageProtoBuf)
+  // @@protoc_insertion_point(copy_constructor:ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf)
 }
 
 void LoginCommandMessageProtoBuf::SharedCtor() {
@@ -117,7 +117,7 @@ void LoginCommandMessageProtoBuf::SharedCtor() {
 }
 
 LoginCommandMessageProtoBuf::~LoginCommandMessageProtoBuf() {
-  // @@protoc_insertion_point(destructor:ChatterCore.Protocols.LoginCommandMessageProtoBuf)
+  // @@protoc_insertion_point(destructor:ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf)
   SharedDtor();
 }
 
@@ -136,7 +136,7 @@ const LoginCommandMessageProtoBuf& LoginCommandMessageProtoBuf::default_instance
 
 
 void LoginCommandMessageProtoBuf::Clear() {
-// @@protoc_insertion_point(message_clear_start:ChatterCore.Protocols.LoginCommandMessageProtoBuf)
+// @@protoc_insertion_point(message_clear_start:ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -158,7 +158,7 @@ const char* LoginCommandMessageProtoBuf::_InternalParse(const char* ptr, ::PROTO
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_username();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ChatterCore.Protocols.LoginCommandMessageProtoBuf.username"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf.username"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -167,7 +167,7 @@ const char* LoginCommandMessageProtoBuf::_InternalParse(const char* ptr, ::PROTO
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           auto str = _internal_mutable_password();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ChatterCore.Protocols.LoginCommandMessageProtoBuf.password"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf.password"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -193,7 +193,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* LoginCommandMessageProtoBuf::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ChatterCore.Protocols.LoginCommandMessageProtoBuf)
+  // @@protoc_insertion_point(serialize_to_array_start:ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -202,7 +202,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_username().data(), static_cast<int>(this->_internal_username().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ChatterCore.Protocols.LoginCommandMessageProtoBuf.username");
+      "ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf.username");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_username(), target);
   }
@@ -212,7 +212,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_password().data(), static_cast<int>(this->_internal_password().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ChatterCore.Protocols.LoginCommandMessageProtoBuf.password");
+      "ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf.password");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_password(), target);
   }
@@ -221,12 +221,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ChatterCore.Protocols.LoginCommandMessageProtoBuf)
+  // @@protoc_insertion_point(serialize_to_array_end:ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf)
   return target;
 }
 
 size_t LoginCommandMessageProtoBuf::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ChatterCore.Protocols.LoginCommandMessageProtoBuf)
+// @@protoc_insertion_point(message_byte_size_start:ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -257,22 +257,22 @@ size_t LoginCommandMessageProtoBuf::ByteSizeLong() const {
 }
 
 void LoginCommandMessageProtoBuf::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ChatterCore.Protocols.LoginCommandMessageProtoBuf)
+// @@protoc_insertion_point(generalized_merge_from_start:ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf)
   GOOGLE_DCHECK_NE(&from, this);
   const LoginCommandMessageProtoBuf* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LoginCommandMessageProtoBuf>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ChatterCore.Protocols.LoginCommandMessageProtoBuf)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ChatterCore.Protocols.LoginCommandMessageProtoBuf)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf)
     MergeFrom(*source);
   }
 }
 
 void LoginCommandMessageProtoBuf::MergeFrom(const LoginCommandMessageProtoBuf& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ChatterCore.Protocols.LoginCommandMessageProtoBuf)
+// @@protoc_insertion_point(class_specific_merge_from_start:ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -289,14 +289,14 @@ void LoginCommandMessageProtoBuf::MergeFrom(const LoginCommandMessageProtoBuf& f
 }
 
 void LoginCommandMessageProtoBuf::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ChatterCore.Protocols.LoginCommandMessageProtoBuf)
+// @@protoc_insertion_point(generalized_copy_from_start:ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void LoginCommandMessageProtoBuf::CopyFrom(const LoginCommandMessageProtoBuf& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ChatterCore.Protocols.LoginCommandMessageProtoBuf)
+// @@protoc_insertion_point(class_specific_copy_from_start:ChatterBoxCore.Protocols.LoginCommandMessageProtoBuf)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -322,10 +322,10 @@ void LoginCommandMessageProtoBuf::InternalSwap(LoginCommandMessageProtoBuf* othe
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace Protocols
-}  // namespace ChatterCore
+}  // namespace ChatterBoxCore
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::ChatterCore::Protocols::LoginCommandMessageProtoBuf* Arena::CreateMaybeMessage< ::ChatterCore::Protocols::LoginCommandMessageProtoBuf >(Arena* arena) {
-  return Arena::CreateInternal< ::ChatterCore::Protocols::LoginCommandMessageProtoBuf >(arena);
+template<> PROTOBUF_NOINLINE ::ChatterBoxCore::Protocols::LoginCommandMessageProtoBuf* Arena::CreateMaybeMessage< ::ChatterBoxCore::Protocols::LoginCommandMessageProtoBuf >(Arena* arena) {
+  return Arena::CreateInternal< ::ChatterBoxCore::Protocols::LoginCommandMessageProtoBuf >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
