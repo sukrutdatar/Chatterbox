@@ -168,6 +168,7 @@
     <ClInclude Include="ChatCommandMessage.h" />
     <ClInclude Include="ChatCommandMessageProtoBuf.pb.h" />
     <ClInclude Include="ChatCommandResponseMessage.h" />
+    <ClInclude Include="ChatCommandResponseMessageProtoBuf.pb.h" />
     <ClInclude Include="ChatterBoxThread.h" />
     <ClInclude Include="IChatterMessageProtoBuf.pb.h" />
     <ClInclude Include="ICommandMessageProtoBuf.pb.h" />
@@ -179,16 +180,20 @@
     <ClInclude Include="ListUsersCommandMessage.h" />
     <ClInclude Include="ListUsersCommandMessageProtoBuf.pb.h" />
     <ClInclude Include="ListUsersCommandResponseMessage.h" />
+    <ClInclude Include="ListUsersCommandResponseMessageProtoBuf.pb.h" />
     <ClInclude Include="LoginCommandMessage.h" />
     <ClInclude Include="LoginCommandMessageProtoBuf.pb.h" />
     <ClInclude Include="LoginCommandResponseMessage.h" />
+    <ClInclude Include="LoginCommandResponseMessageProtoBuf.pb.h" />
     <ClInclude Include="LogoutCommandMessage.h" />
     <ClInclude Include="LogoutCommandMessageProtoBuf.pb.h" />
     <ClInclude Include="LogoutCommandResponseMessage.h" />
+    <ClInclude Include="LogoutCommandResponseMessageProtoBuf.pb.h" />
     <ClInclude Include="MessageConverter.h" />
     <ClInclude Include="RegisterCommandMessage.h" />
     <ClInclude Include="RegisterCommandMessageProtoBuf.pb.h" />
     <ClInclude Include="RegisterCommandResponseMessage.h" />
+    <ClInclude Include="RegisterCommandResponseMessageProtoBuf.pb.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TextChatterMessage.h" />
@@ -201,6 +206,7 @@
     <ClCompile Include="ChatCommandMessage.cpp" />
     <ClCompile Include="ChatCommandMessageProtoBuf.pb.cc" />
     <ClCompile Include="ChatCommandResponseMessage.cpp" />
+    <ClCompile Include="ChatCommandResponseMessageProtoBuf.pb.cc" />
     <ClCompile Include="ChatterBoxThread.cpp" />
     <ClCompile Include="IChatterMessageProtoBuf.pb.cc" />
     <ClCompile Include="ICommandMessageProtoBuf.pb.cc" />
@@ -212,16 +218,20 @@
     <ClCompile Include="ListUsersCommandMessage.cpp" />
     <ClCompile Include="ListUsersCommandMessageProtoBuf.pb.cc" />
     <ClCompile Include="ListUsersCommandResponseMessage.cpp" />
+    <ClCompile Include="ListUsersCommandResponseMessageProtoBuf.pb.cc" />
     <ClCompile Include="LoginCommandMessage.cpp" />
     <ClCompile Include="LoginCommandMessageProtoBuf.pb.cc" />
     <ClCompile Include="LoginCommandResponseMessage.cpp" />
+    <ClCompile Include="LoginCommandResponseMessageProtoBuf.pb.cc" />
     <ClCompile Include="LogoutCommandMessage.cpp" />
     <ClCompile Include="LogoutCommandMessageProtoBuf.pb.cc" />
     <ClCompile Include="LogoutCommandResponseMessage.cpp" />
+    <ClCompile Include="LogoutCommandResponseMessageProtoBuf.pb.cc" />
     <ClCompile Include="MessageConverter.cpp" />
     <ClCompile Include="RegisterCommandMessage.cpp" />
     <ClCompile Include="RegisterCommandMessageProtoBuf.pb.cc" />
     <ClCompile Include="RegisterCommandResponseMessage.cpp" />
+    <ClCompile Include="RegisterCommandResponseMessageProtoBuf.pb.cc" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
