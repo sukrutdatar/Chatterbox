@@ -1,0 +1,12 @@
+syntax = "proto3";
+package ChatterCore.Protocols;
+
+message IChatterMessageProtoBuf {
+	enum ChatterTypeProtoBuf
+	{
+		TextChatter = 0;
+		AudioChatter = 1;
+	}
+
+	ChatterTypeProtoBuf chatterType = 3;
+}

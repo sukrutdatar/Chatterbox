@@ -1,0 +1,6 @@
+syntax = "proto3";
+package ChatterCore.Protocols;
+
+message LogoutCommandMessageProtoBuf
+{
+}

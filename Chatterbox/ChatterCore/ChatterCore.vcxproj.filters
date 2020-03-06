@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\ProtoBuf">
+      <UniqueIdentifier>{f0671b60-aa7a-4dd7-9ff3-78b8d4da3c53}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -75,6 +78,36 @@
     <ClInclude Include="ChatterBoxThread.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ChatCommandMessageProtoBuf.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IChatterMessageProtoBuf.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ICommandMessageProtoBuf.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ICommandResponseMessageProtoBuf.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IMessageProtoBuf.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListUsersCommandMessageProtoBuf.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginCommandMessageProtoBuf.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LogoutCommandMessageProtoBuf.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RegisterCommandMessageProtoBuf.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextChatterMessageProtoBuf.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -133,6 +166,36 @@
     </ClCompile>
     <ClCompile Include="IMessage.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextChatterMessageProtoBuf.pb.cc">
+      <Filter>Source Files\ProtoBuf</Filter>
+    </ClCompile>
+    <ClCompile Include="RegisterCommandMessageProtoBuf.pb.cc">
+      <Filter>Source Files\ProtoBuf</Filter>
+    </ClCompile>
+    <ClCompile Include="LogoutCommandMessageProtoBuf.pb.cc">
+      <Filter>Source Files\ProtoBuf</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginCommandMessageProtoBuf.pb.cc">
+      <Filter>Source Files\ProtoBuf</Filter>
+    </ClCompile>
+    <ClCompile Include="ListUsersCommandMessageProtoBuf.pb.cc">
+      <Filter>Source Files\ProtoBuf</Filter>
+    </ClCompile>
+    <ClCompile Include="IMessageProtoBuf.pb.cc">
+      <Filter>Source Files\ProtoBuf</Filter>
+    </ClCompile>
+    <ClCompile Include="ICommandResponseMessageProtoBuf.pb.cc">
+      <Filter>Source Files\ProtoBuf</Filter>
+    </ClCompile>
+    <ClCompile Include="ICommandMessageProtoBuf.pb.cc">
+      <Filter>Source Files\ProtoBuf</Filter>
+    </ClCompile>
+    <ClCompile Include="IChatterMessageProtoBuf.pb.cc">
+      <Filter>Source Files\ProtoBuf</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatCommandMessageProtoBuf.pb.cc">
+      <Filter>Source Files\ProtoBuf</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,0 +1,15 @@
+syntax = "proto3";
+package ChatterCore.Protocols;
+
+message ICommandMessageProtoBuf {
+	enum CommandTypeProtoBuf
+	{
+		LoginCommand = 0;
+		LogoutCommand = 1;
+		ListUsersCommand = 2;
+		RegisterCommand = 3;
+		ChatCommand = 4;
+	}
+
+	CommandTypeProtoBuf commandType = 3;
+}

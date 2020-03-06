@@ -1,0 +1,7 @@
+syntax = "proto3";
+package ChatterCore.Protocols;
+
+message ChatCommandMessageProtoBuf
+{
+	string chatWithUser = 4;
+}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+package ChatterCore.Protocols;
+
+message LoginCommandMessageProtoBuf
+{
+	string username = 4;
+	string password = 5;
+}

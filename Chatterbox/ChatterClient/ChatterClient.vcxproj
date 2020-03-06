@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -72,25 +72,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\google\;$(IncludePath)</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\google\;$(IncludePath)</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\google\;$(IncludePath)</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\google\;$(IncludePath)</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
@@ -108,7 +108,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>PocoFoundationmt.lib;PocoXMLmt.lib;PocoJSONmt.lib;PocoUtilmt.lib;ChatterCore.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>PocoFoundationmt.lib;PocoXMLmt.lib;PocoJSONmt.lib;PocoUtilmt.lib;ChatterCore.lib;libprotobuf.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)Libs\$(Platform)\;$(SolutionDir)Bin\$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -126,7 +126,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>PocoFoundationmt.lib;PocoXMLmt.lib;PocoJSONmt.lib;PocoUtilmt.lib;ChatterCore.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>PocoFoundationmt.lib;PocoXMLmt.lib;PocoJSONmt.lib;PocoUtilmt.lib;ChatterCore.lib;libprotobuf.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)Libs\$(Platform)\;$(SolutionDir)Bin\$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -148,7 +148,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>PocoFoundationmt.lib;PocoXMLmt.lib;PocoJSONmt.lib;PocoUtilmt.lib;ChatterCore.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>PocoFoundationmt.lib;PocoXMLmt.lib;PocoJSONmt.lib;PocoUtilmt.lib;ChatterCore.lib;libprotobuf.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)Libs\$(Platform)\;$(SolutionDir)Bin\$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -170,7 +170,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>PocoFoundationmt.lib;PocoXMLmt.lib;PocoJSONmt.lib;PocoUtilmt.lib;ChatterCore.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>PocoFoundationmt.lib;PocoXMLmt.lib;PocoJSONmt.lib;PocoUtilmt.lib;ChatterCore.lib;libprotobuf.lib;Iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)Libs\$(Platform)\;$(SolutionDir)Bin\$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

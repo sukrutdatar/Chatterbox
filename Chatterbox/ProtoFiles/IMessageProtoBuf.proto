@@ -1,0 +1,14 @@
+syntax = "proto3";
+package ChatterCore.Protocols;
+
+message IMessageProtoBuf {
+	enum MessageTypeProtoBuf
+	{
+		CommandMessage = 0;
+		ChatterMessage = 1;
+		CommandResponseMessage = 2;
+	}
+
+	MessageTypeProtoBuf messageType = 1;
+	string sessionKey = 2;
+}

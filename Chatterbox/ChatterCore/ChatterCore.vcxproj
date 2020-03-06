@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -72,25 +72,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\google\;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\google\;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\google\;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)Includes\PocoFoundation\;$(SolutionDir)Includes\PocoXml\;$(SolutionDir)Includes\PocoUtil\;$(SolutionDir)Includes\PocoJson\;$(SolutionDir)Includes\google\;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Libs\$(Platform)\;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
@@ -166,40 +166,59 @@
     <ClInclude Include="BackgroundWorker.h" />
     <ClInclude Include="CBLogger.h" />
     <ClInclude Include="ChatCommandMessage.h" />
+    <ClInclude Include="ChatCommandMessageProtoBuf.pb.h" />
     <ClInclude Include="ChatCommandResponseMessage.h" />
     <ClInclude Include="ChatterBoxThread.h" />
+    <ClInclude Include="IChatterMessageProtoBuf.pb.h" />
+    <ClInclude Include="ICommandMessageProtoBuf.pb.h" />
+    <ClInclude Include="ICommandResponseMessageProtoBuf.pb.h" />
     <ClInclude Include="IMessage.h" />
+    <ClInclude Include="IMessageProtoBuf.pb.h" />
     <ClInclude Include="IMessageQueue.h" />
     <ClInclude Include="IRunnable.h" />
     <ClInclude Include="ListUsersCommandMessage.h" />
+    <ClInclude Include="ListUsersCommandMessageProtoBuf.pb.h" />
     <ClInclude Include="ListUsersCommandResponseMessage.h" />
     <ClInclude Include="LoginCommandMessage.h" />
+    <ClInclude Include="LoginCommandMessageProtoBuf.pb.h" />
     <ClInclude Include="LoginCommandResponseMessage.h" />
     <ClInclude Include="LogoutCommandMessage.h" />
+    <ClInclude Include="LogoutCommandMessageProtoBuf.pb.h" />
     <ClInclude Include="LogoutCommandResponseMessage.h" />
     <ClInclude Include="RegisterCommandMessage.h" />
+    <ClInclude Include="RegisterCommandMessageProtoBuf.pb.h" />
     <ClInclude Include="RegisterCommandResponseMessage.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TextChatterMessage.h" />
+    <ClInclude Include="TextChatterMessageProtoBuf.pb.h" />
     <ClInclude Include="Util.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BackgroundWorker.cpp" />
     <ClCompile Include="CBLogger.cpp" />
     <ClCompile Include="ChatCommandMessage.cpp" />
+    <ClCompile Include="ChatCommandMessageProtoBuf.pb.cc" />
     <ClCompile Include="ChatCommandResponseMessage.cpp" />
     <ClCompile Include="ChatterBoxThread.cpp" />
+    <ClCompile Include="IChatterMessageProtoBuf.pb.cc" />
+    <ClCompile Include="ICommandMessageProtoBuf.pb.cc" />
+    <ClCompile Include="ICommandResponseMessageProtoBuf.pb.cc" />
     <ClCompile Include="IMessage.cpp" />
+    <ClCompile Include="IMessageProtoBuf.pb.cc" />
     <ClCompile Include="IMessageQueue.cpp" />
     <ClCompile Include="IRunnable.cpp" />
     <ClCompile Include="ListUsersCommandMessage.cpp" />
+    <ClCompile Include="ListUsersCommandMessageProtoBuf.pb.cc" />
     <ClCompile Include="ListUsersCommandResponseMessage.cpp" />
     <ClCompile Include="LoginCommandMessage.cpp" />
+    <ClCompile Include="LoginCommandMessageProtoBuf.pb.cc" />
     <ClCompile Include="LoginCommandResponseMessage.cpp" />
     <ClCompile Include="LogoutCommandMessage.cpp" />
+    <ClCompile Include="LogoutCommandMessageProtoBuf.pb.cc" />
     <ClCompile Include="LogoutCommandResponseMessage.cpp" />
     <ClCompile Include="RegisterCommandMessage.cpp" />
+    <ClCompile Include="RegisterCommandMessageProtoBuf.pb.cc" />
     <ClCompile Include="RegisterCommandResponseMessage.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -208,6 +227,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TextChatterMessage.cpp" />
+    <ClCompile Include="TextChatterMessageProtoBuf.pb.cc" />
     <ClCompile Include="Util.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
