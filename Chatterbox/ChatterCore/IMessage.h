@@ -69,6 +69,11 @@ namespace ChatterBoxCore
 		IChatterMessage(ChatterType chatterType, std::string sessionKey = "") : IMessage(ChatterMessage, sessionKey), m_chatterType(chatterType)
 		{}
 		virtual ~IChatterMessage() {}
+
+		ChatterType GetChatterType()
+		{
+			return m_chatterType;
+		}
 	};
 
 #pragma endregion
@@ -87,6 +92,11 @@ namespace ChatterBoxCore
 		}
 		
 		virtual ~ICommandMessage() {}
+
+		CommandType GetCommandType()
+		{
+			return m_commandType;
+		}
 	};
 
 #pragma endregion
@@ -113,6 +123,11 @@ namespace ChatterBoxCore
 
 		std::string GetResponseMessage();
 		void SetResponseMessage(std::string);
+
+		CommandResponseType GetCommandResponseType()
+		{
+			return m_commandResponseType;
+		}
 
 		virtual ~ICommandResponseMessage() {}
 	};
